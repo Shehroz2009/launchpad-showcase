@@ -108,7 +108,7 @@ kit or its source. The purchase is one-time, with no subscription or ongoing
 support obligations; you receive the current version, and future updates are
 not promised.
 
-👉 **[Get Full Access on Gumroad](https://gumroad.com/l/REPLACE_WITH_PRODUCT_SLUG)**
+👉 **[Get Full Access on Gumroad](https://shehroz2009.gumroad.com/l/launchpad_saas_starter_kit)**
 
 ## Repository topics
 
