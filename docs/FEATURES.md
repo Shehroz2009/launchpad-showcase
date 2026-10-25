@@ -67,23 +67,23 @@ examples, and landing/pricing screenshots for each non-English locale:
 
 | Locale            | Landing                                     | Pricing                                        |
 | ----------------- | ------------------------------------------- | ---------------------------------------------- |
-| Arabic (`ar`)     | [Screenshot](../screenshots/22-home-ar.png) | [Screenshot](../screenshots/23-pricing-ar.png) |
-| Bengali (`bn`)    | [Screenshot](../screenshots/24-home-bn.png) | [Screenshot](../screenshots/25-pricing-bn.png) |
-| German (`de`)     | [Screenshot](../screenshots/20-home-de.png) | [Screenshot](../screenshots/21-pricing-de.png) |
-| Spanish (`es`)    | [Screenshot](../screenshots/26-home-es.png) | [Screenshot](../screenshots/27-pricing-es.png) |
-| French (`fr`)     | [Screenshot](../screenshots/28-home-fr.png) | [Screenshot](../screenshots/29-pricing-fr.png) |
-| Hindi (`hi`)      | [Screenshot](../screenshots/30-home-hi.png) | [Screenshot](../screenshots/31-pricing-hi.png) |
-| Indonesian (`id`) | [Screenshot](../screenshots/32-home-id.png) | [Screenshot](../screenshots/33-pricing-id.png) |
-| Italian (`it`)    | [Screenshot](../screenshots/34-home-it.png) | [Screenshot](../screenshots/35-pricing-it.png) |
-| Japanese (`ja`)   | [Screenshot](../screenshots/36-home-ja.png) | [Screenshot](../screenshots/37-pricing-ja.png) |
-| Korean (`ko`)     | [Screenshot](../screenshots/38-home-ko.png) | [Screenshot](../screenshots/39-pricing-ko.png) |
-| Dutch (`nl`)      | [Screenshot](../screenshots/40-home-nl.png) | [Screenshot](../screenshots/41-pricing-nl.png) |
-| Polish (`pl`)     | [Screenshot](../screenshots/42-home-pl.png) | [Screenshot](../screenshots/43-pricing-pl.png) |
-| Portuguese (`pt`) | [Screenshot](../screenshots/44-home-pt.png) | [Screenshot](../screenshots/45-pricing-pt.png) |
-| Russian (`ru`)    | [Screenshot](../screenshots/46-home-ru.png) | [Screenshot](../screenshots/47-pricing-ru.png) |
-| Turkish (`tr`)    | [Screenshot](../screenshots/48-home-tr.png) | [Screenshot](../screenshots/49-pricing-tr.png) |
-| Vietnamese (`vi`) | [Screenshot](../screenshots/50-home-vi.png) | [Screenshot](../screenshots/51-pricing-vi.png) |
-| Chinese (`zh`)    | [Screenshot](../screenshots/52-home-zh.png) | [Screenshot](../screenshots/53-pricing-zh.png) |
+| Arabic (`ar`)     | [Screenshot](../screenshots/30-home-ar.png) | [Screenshot](../screenshots/31-pricing-ar.png) |
+| Bengali (`bn`)    | [Screenshot](../screenshots/32-home-bn.png) | [Screenshot](../screenshots/33-pricing-bn.png) |
+| German (`de`)     | [Screenshot](../screenshots/34-home-de.png) | [Screenshot](../screenshots/35-pricing-de.png) |
+| Spanish (`es`)    | [Screenshot](../screenshots/36-home-es.png) | [Screenshot](../screenshots/37-pricing-es.png) |
+| French (`fr`)     | [Screenshot](../screenshots/38-home-fr.png) | [Screenshot](../screenshots/39-pricing-fr.png) |
+| Hindi (`hi`)      | [Screenshot](../screenshots/40-home-hi.png) | [Screenshot](../screenshots/41-pricing-hi.png) |
+| Indonesian (`id`) | [Screenshot](../screenshots/42-home-id.png) | [Screenshot](../screenshots/43-pricing-id.png) |
+| Italian (`it`)    | [Screenshot](../screenshots/44-home-it.png) | [Screenshot](../screenshots/45-pricing-it.png) |
+| Japanese (`ja`)   | [Screenshot](../screenshots/46-home-ja.png) | [Screenshot](../screenshots/47-pricing-ja.png) |
+| Korean (`ko`)   | [Screenshot](../screenshots/48-home-ko.png) | [Screenshot](../screenshots/49-pricing-ko.png) |
+| Dutch (`nl`)      | [Screenshot](../screenshots/50-home-nl.png) | [Screenshot](../screenshots/51-pricing-nl.png) |
+| Polish (`pl`)     | [Screenshot](../screenshots/52-home-pl.png) | [Screenshot](../screenshots/53-pricing-pl.png) |
+| Portuguese (`pt`) | [Screenshot](../screenshots/54-home-pt.png) | [Screenshot](../screenshots/55-pricing-pt.png) |
+| Russian (`ru`)    | [Screenshot](../screenshots/56-home-ru.png) | [Screenshot](../screenshots/57-pricing-ru.png) |
+| Turkish (`tr`)    | [Screenshot](../screenshots/58-home-tr.png) | [Screenshot](../screenshots/59-pricing-tr.png) |
+| Vietnamese (`vi`) | [Screenshot](../screenshots/60-home-vi.png) | [Screenshot](../screenshots/61-pricing-vi.png) |
+| Chinese (`zh`)    | [Screenshot](../screenshots/62-home-zh.png) | [Screenshot](../screenshots/63-pricing-zh.png) |
 
 ## Architecture and quality
 
