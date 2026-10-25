@@ -1,0 +1,79 @@
+Proprietary Software License
+
+Copyright (c) 2026 Launchpad Starter Kit contributors
+
+This license applies to the Launchpad Starter Kit software and documentation
+provided by the copyright holder (the "Software"). By purchasing or using the
+Software, you agree to these terms. If you do not agree, do not use the
+Software.
+
+1. License grant
+
+Subject to these terms and payment of the applicable purchase price, the
+copyright holder grants the purchaser (the "Licensee") a limited,
+non-exclusive, non-transferable, non-sublicensable license to install, run,
+use, and modify the Software to develop, operate, and maintain one product or
+service owned and controlled by the Licensee. The product or service may be
+public-facing and offered commercially to customers and the public. The
+Licensee may use the Software in development, testing, and production
+environments for that product or service.
+
+The Software and any modifications may be accessed only by the Licensee and
+its employees, and by contractors acting solely on the Licensee's behalf who
+are bound by written confidentiality and use restrictions. The Licensee is
+responsible for their compliance with this license. End users and customers
+may interact with the Licensee's product or service through its intended
+public interface, but must not receive the Software, its source code, or
+access to it as a reusable starter kit or development template.
+
+2. Restrictions
+
+The Licensee must not, and must not permit any other person to:
+
+- sell, resell, rent, lease, sublicense, publish, distribute, disclose, or
+  otherwise make the Software, its source code, or any portion of it
+  available to any third party, including as a template, starter kit,
+  boilerplate, or competing product;
+- sell, resell, rent, lease, sublicense, or distribute the Software or its
+  modifications as software, source code, a development tool, or a reusable
+  template, whether on their own or bundled with another product;
+- use the Software to develop or operate more than one product or service, or
+  to create a commissioned product for another person or organization. This
+  restriction does not prohibit offering the Licensee's own licensed product
+  to customers or the public as permitted above;
+- remove or alter copyright, attribution, or proprietary notices; or
+- reverse engineer or attempt to extract source code from any part of the
+  Software, except to the extent that this restriction is prohibited by
+  applicable law.
+
+For clarity, the Licensee may charge customers for, advertise, and publicly
+operate the one product or service developed with the Software. This does not
+grant any right to distribute or sublicense the Software itself or to provide
+customers with the Software or its source code. Modifications made for the
+licensed product remain subject to these restrictions.
+
+3. Ownership and third-party software
+
+The Software is licensed, not sold. The copyright holder retains all rights
+not expressly granted in this license. Components identified as third-party
+software remain subject to their respective licenses; this license does not
+replace or limit those terms.
+
+4. Termination
+
+This license terminates automatically if the Licensee materially breaches
+these terms. Upon termination, the Licensee must stop using the Software and
+delete all copies in its possession or control, except where retention is
+required by applicable law.
+
+5. Disclaimer and limitation of liability
+
+To the maximum extent permitted by applicable law, the Software is provided
+"AS IS", without warranties or conditions of any kind, express or implied.
+To the maximum extent permitted by applicable law, the copyright holder is
+not liable for any indirect, incidental, special, consequential, or punitive
+damages, or for any loss of profits, data, or business, arising from or
+related to the Software or this license.
+
+Nothing in this license excludes or limits liability that cannot legally be
+excluded or limited.

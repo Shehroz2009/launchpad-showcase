@@ -1,116 +1,112 @@
 # Launchpad — Next.js SaaS Starter
 
-**Ship your SaaS foundation, not another week of setup.**
+**Ship your product, not another week of SaaS plumbing.**
 
-Launchpad is a bilingual commercial starter kit for building a customer-facing
-product or SaaS. It combines **Next.js 15, Prisma, PostgreSQL, and
-production-minded Stripe webhook handling** with authentication, a dashboard,
-and deployment guidance.
+Launchpad is a customizable, modular Next.js starter for customer-facing SaaS
+products. It brings together authentication, billing, a customer dashboard,
+admin tools, and a broad set of optional product modules.
 
-> **Want the complete source code?**  
-> 👉 [Get Full Access on Gumroad](https://shehroz2009.gumroad.com/l/launchpad_saas_starter_kit)
-> — $129 one-time purchase. No subscriptions. No ongoing support obligations.
-> You get the current version of the starter kit.
+> Launchpad is a commercial starter kit. The one-time purchase is for the
+> current version; it does not include subscriptions, promised future updates,
+> or ongoing support. See the included project license and current purchase
+> terms before use.
+
+[Get the current starter kit on Gumroad — $129 one-time](https://shehroz2009.gumroad.com/l/launchpad_saas_starter_kit)
 
 ## Preview
 
-![Launchpad dashboard and pricing preview tour](./assets/preview-tour.gif)
+![Launchpad landing page](./screenshots/01-landing-dark.png)
 
-The tour is an animated transition between the included dashboard and pricing
-screenshots; it is not a live product recording.
+| Dashboard                                             | Pricing                                       |
+| ----------------------------------------------------- | --------------------------------------------- |
+| ![Customer dashboard](./screenshots/05-dashboard.png) | ![Pricing page](./screenshots/03-pricing.png) |
 
-| Dashboard                                              | Pricing page                                       |
-| ------------------------------------------------------ | -------------------------------------------------- |
-| ![Launchpad dashboard preview](./assets/dashboard.png) | ![Launchpad pricing preview](./assets/pricing.png) |
-
-More product screenshots and the cover image are in [`assets/`](./assets/).
+Browse the [English product screenshots](./screenshots/) or see the localized
+landing and pricing pages for [all 17 other locales](./docs/FEATURES.md#localization).
 
 ## What is included
 
-- **Next.js 15 App Router**, React 19, TypeScript, and Tailwind CSS 4.
-- **Prisma and PostgreSQL**, including a schema and initial migration.
-- **Stripe billing** with Checkout, Customer Portal, recurring subscriptions,
-  and one-time payment synchronization.
-- **Ready-to-use Stripe webhook processing** with signature verification,
-  transactional event idempotency, and retryable failures.
-- Auth.js sign-in with email magic links and optional Google/GitHub OAuth.
-- Protected, localized dashboard, account settings, and admin tools.
-- English and Russian interface, setup guides, and deployment instructions.
+- Next.js 15, React 19, TypeScript, and Tailwind CSS 4.
+- PostgreSQL and Prisma, with migrations and a local Docker Compose database.
+- Auth.js sign-in by email link, optional Google/GitHub OAuth, protected routes,
+  TOTP multi-factor authentication, and recovery codes.
+- Stripe subscriptions, one-time checkout, Customer Portal, signed webhooks,
+  and Apple App Store / Google Play purchase verification.
+- A responsive customer dashboard and server-authorized admin areas.
+- Optional modules for analytics, email campaigns, AI, organizations,
+  notifications, support, publishing, marketing, storage, and more.
+- A guided project setup wizard, GitHub Actions checks, and deployment guides.
+
+## Current capabilities
+
+The project includes public landing and pricing pages, customer account flows,
+admin tools, content publishing, product analytics, notification delivery,
+security controls, and supported customization settings. Modules can be
+selected during first-run setup, but the application remains a modular
+monolith: selected features share the same application and database
+infrastructure.
+
+Provider-backed features require your own provider accounts, credentials, and
+configuration. The setup wizard can test selected credentials, but it does not
+create accounts, complete OAuth consent, provision cloud infrastructure, or
+guarantee every production permission.
+
+See the [feature matrix](./docs/FEATURES.md) and the detailed
+[implementation guide](./docs/FEATURE-GUIDE.md) for the exact current scope,
+requirements, and limitations.
 
 ## Architecture at a glance
 
 ```mermaid
 flowchart LR
-  Visitor[Customer browser] --> App[Next.js 15 App Router]
-  App --> Auth[Auth.js]
+  Visitor[Customer browser] --> App[Next.js application]
+  App --> Auth[Auth.js authentication]
   App --> DB[(PostgreSQL via Prisma)]
-  App --> Stripe[Stripe Checkout and Portal]
-  Stripe --> Webhook[Signed Stripe webhooks]
+  App --> Stripe[Stripe checkout and billing portal]
+  Stripe --> Webhook[Signed provider webhooks]
   Webhook --> DB
-  Email[Resend magic links] --> Visitor
+  App --> Email[Resend, SendGrid, or SMTP]
+  App --> Storage[Optional S3-compatible storage]
 ```
 
 ## Stack
 
-| Area           | Technology                                        |
-| -------------- | ------------------------------------------------- |
-| Application    | Next.js 15, React 19, TypeScript                  |
-| Styling        | Tailwind CSS 4, shadcn/ui-compatible components   |
-| Authentication | Auth.js, email magic links, optional OAuth        |
-| Data           | PostgreSQL, Prisma                                |
-| Billing        | Stripe Checkout, Customer Portal, signed webhooks |
-| Quality        | ESLint, Prettier, TypeScript checks               |
-| Deployment     | Vercel-compatible Next.js deployment              |
+| Area           | Technology                                                    |
+| -------------- | ------------------------------------------------------------- |
+| Application    | Next.js 15, React 19, TypeScript                              |
+| Styling        | Tailwind CSS 4, reusable shadcn/ui-compatible components      |
+| Authentication | Auth.js, email links, optional Google/GitHub OAuth            |
+| Data           | PostgreSQL, Prisma                                            |
+| Payments       | Stripe; optional Apple App Store and Google Play verification |
+| Quality        | ESLint, Prettier, TypeScript checks, automated tests          |
+| Deployment     | GitHub Actions checks; Vercel integration and host guides     |
 
-## Quick setup overview
+## Quick start
 
-The purchase includes the complete source project. At a glance, the setup is:
+Use Node.js 20.9 or newer (Node.js 22 LTS recommended), Docker Compose, and
+PostgreSQL 14 or newer. From a clean project archive or checkout, start the
+local database if using Docker, then run:
 
-1. Install Node.js 20.9+ and npm; provide a PostgreSQL database.
-2. Create `.env` from the included `.env.example` and configure database URLs
-   and an Auth.js secret.
-3. Install dependencies, generate Prisma Client, and apply the database
-   migrations.
-4. Start the app locally; add Resend, OAuth, and Stripe credentials only for
-   the integrations you want to enable.
+```bash
+docker compose up -d
+npm run setup
+```
 
-The complete setup guide, environment-variable reference, and tested workflow
-are included in the purchase. This showcase repository intentionally contains
-no application source code or runnable implementation.
-
-## Deploy to Vercel
-
-The kit is designed for a standard Next.js deployment:
-
-1. Provision PostgreSQL and configure pooled runtime and direct migration
-   connection URLs where your provider requires them.
-2. Import the purchased source project into Vercel.
-3. Set required database and authentication environment variables in Vercel.
-4. Apply Prisma migrations before serving traffic.
-5. Configure provider callback URLs and the production Stripe webhook endpoint.
-6. Verify sign-in, billing, and webhook delivery in the deployed environment.
-
-See [`docs/VERCEL.md`](./docs/VERCEL.md) for the deployment checklist. Detailed
-instructions are provided with the source kit.
+The setup wizard selects modules and deployment target, collects settings, and
+offers provider checks where supported. Read the full
+[quickstart guide](./docs/QUICKSTART.md) before configuring a real deployment.
 
 ## Documentation
 
-- [Quick setup and environment guide](./docs/QUICKSTART.md)
+- [Quickstart and configuration](./docs/QUICKSTART.md)
+- [Feature matrix and current scope](./docs/FEATURES.md)
+- [Full implementation and operations guide](./docs/FEATURE-GUIDE.md)
 - [Vercel deployment checklist](./docs/VERCEL.md)
+- [Screenshots](./screenshots/)
 
 ## License and purchase
 
-The public repository is a product preview, not the starter kit. It does not
-include the commercial application source. The Gumroad purchase grants the
-rights described in the included proprietary license: use and modify the kit
-for one public-facing product or service; do not redistribute or resell the
-kit or its source. The purchase is one-time, with no subscription or ongoing
-support obligations; you receive the current version, and future updates are
-not promised.
-
-👉 **[Get Full Access on Gumroad](https://shehroz2009.gumroad.com/l/launchpad_saas_starter_kit)**
-
-## Repository topics
-
-Suggested GitHub topics: `nextjs15`, `react19`, `stripe-webhooks`, `prisma`,
-`saas-starter`, `authjs-v5`.
+The project is a commercial starter kit, not a hosted SaaS subscription.
+Purchase terms and permitted use are defined by the included
+[LICENSE](./LICENSE). The current version is provided as a one-time purchase;
+ongoing support and future updates are not promised.
