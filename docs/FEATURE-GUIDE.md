@@ -1,9 +1,9 @@
 # Feature guide
 
-This guide describes the behavior of the modules currently included in
-Launchpad, where their data lives, and which configuration is needed. It
-documents the starter implementation; it is not a claim that provider
-accounts, production secrets, or third-party dashboards are preconfigured.
+This guide describes the behavior of Launchpad's included modules, where their
+data lives, and which configuration is needed. It documents the current
+application; provider accounts, production secrets, and third-party dashboards
+must still be configured for each deployment.
 
 ## First-run project setup
 
@@ -1018,9 +1018,11 @@ Administrators can also publish the shared primary brand color and corner
 radius. The brand is applied at the document root and adapts to light/dark mode;
 the foreground color is selected automatically for contrast. A user's
 browser-local theme editor can override this shared default. Existing stored
-configurations without brand settings receive the starter defaults when parsed.
+configurations without brand settings receive Launchpad's default brand values
+when parsed.
 
-This builder composes the starter's existing sections and navigation registry;
+This builder composes the application's allowlisted sections and navigation
+registry;
 it does not execute uploaded code, create arbitrary components, replace CMS
 pages, change application routes/business logic, or edit browser-local UI/UX
 and motion preferences. The section and navigation registries are deliberately
@@ -1105,9 +1107,10 @@ address or user-agent, issues a signed, HTTP-only, SameSite=Lax cookie for 30
 days, and redirects to the localized home page. The first active referral
 click is retained; after sign-in, one account can be attributed to at most one
 partner. When the hosting proxy provides a client address, the endpoint is
-rate-limited by its keyed hash; raw addresses are not stored. This starter has
-no consent manager; deployments subject to consent requirements must disclose
-and gate the 30-day attribution cookie accordingly. Self-referrals are rejected.
+rate-limited by its keyed hash; raw addresses are not stored. Launchpad does
+not include a consent manager; deployments subject to consent requirements must
+disclose and gate the 30-day attribution cookie accordingly. Self-referrals are
+rejected.
 
 The referral dashboard shows visits, referred accounts, and reward totals by
 currency and state. Verified successful Stripe one-time payments and paid
@@ -1271,7 +1274,7 @@ is reachable.
 
 ## Security boundaries and operational scope
 
-The starter validates environment variables at runtime, validates profile,
+Launchpad validates environment variables at runtime, validates profile,
 admin, newsletter, and checkout input with Zod, checks user/admin identity on
 the server, validates Stripe webhook signatures, and uses transactional
 idempotency for Stripe events and billing-email delivery. Subscription
@@ -1301,7 +1304,7 @@ also receive HSTS. A strict Content Security Policy is not enabled because the
 application currently uses inline style attributes and provider integrations;
 add a nonce-based CSP after auditing those surfaces.
 
-These protections are a baseline, not a complete security program. The starter
+These protections are a baseline, not a complete security program. Launchpad
 includes optional TOTP MFA with one-time recovery codes, but does not include a
 password-based account recovery workflow, an external WAF, or automated
 vulnerability monitoring. Rate limiting and audit logging require the

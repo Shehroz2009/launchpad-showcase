@@ -1,8 +1,8 @@
 Proprietary Software License
 
-Copyright (c) 2026 Launchpad Starter Kit contributors
+Copyright (c) 2026 Launchpad contributors
 
-This license applies to the Launchpad Starter Kit software and documentation
+This license applies to the Launchpad software and documentation
 provided by the copyright holder (the "Software"). By purchasing or using the
 Software, you agree to these terms. If you do not agree, do not use the
 Software.
@@ -24,7 +24,7 @@ are bound by written confidentiality and use restrictions. The Licensee is
 responsible for their compliance with this license. End users and customers
 may interact with the Licensee's product or service through its intended
 public interface, but must not receive the Software, its source code, or
-access to it as a reusable starter kit or development template.
+access to it as reusable development software or a product template.
 
 2. Restrictions
 
@@ -32,8 +32,8 @@ The Licensee must not, and must not permit any other person to:
 
 - sell, resell, rent, lease, sublicense, publish, distribute, disclose, or
   otherwise make the Software, its source code, or any portion of it
-  available to any third party, including as a template, starter kit,
-  boilerplate, or competing product;
+  available to any third party, including as a template, boilerplate, or
+  competing product;
 - sell, resell, rent, lease, sublicense, or distribute the Software or its
   modifications as software, source code, a development tool, or a reusable
   template, whether on their own or bundled with another product;

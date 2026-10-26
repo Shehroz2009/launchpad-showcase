@@ -1,7 +1,7 @@
 # Quickstart
 
-Launchpad is a source project, not a hosted service. You provide the runtime,
-database, provider accounts, and production credentials for your product.
+Launchpad is an application you run and operate, not a hosted service. You
+provide its runtime, database, provider accounts, and production credentials.
 
 ## Requirements
 

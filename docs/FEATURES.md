@@ -1,9 +1,10 @@
 # Feature matrix
 
-This matrix describes the implementation in the current Launchpad project. It
-does not mean external provider accounts, production infrastructure, or
-credentials are included. Integrations require setup in the provider and in
-your deployment environment.
+Launchpad is a modular SaaS monolith: selected capabilities run in one
+application and share its PostgreSQL data model. This matrix describes the
+current implementation, not externally provisioned provider accounts,
+production infrastructure, or credentials. Integrations require setup in the
+provider and in your deployment environment.
 
 ## Product capabilities
 

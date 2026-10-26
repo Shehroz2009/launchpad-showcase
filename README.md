@@ -1,79 +1,78 @@
-# Launchpad — Next.js SaaS Starter
+# Launchpad — Modular SaaS Monolith with Production-Ready Admin & Security
 
-**Ship your product, not another week of SaaS plumbing.**
+**Launch a SaaS product without assembling its core systems from scratch.**
 
-Launchpad is a customizable, modular Next.js starter for customer-facing SaaS
-products. It brings together authentication, billing, a customer dashboard,
-admin tools, and a broad set of optional product modules.
+Launchpad is a modular SaaS application: one cohesive Next.js codebase and
+shared PostgreSQL data model for customer accounts, billing, administration,
+content, and optional product capabilities. It is built for teams that want
+control over their application and infrastructure—not a hosted service or a
+collection of separately deployed services.
 
-> Launchpad is a commercial starter kit. The one-time purchase is for the
-> current version; it does not include subscriptions, promised future updates,
-> or ongoing support. See the included project license and current purchase
-> terms before use.
+> Launchpad includes production-oriented administration and security
+> capabilities, but it does not make a product production-ready by itself.
+> You remain responsible for provider configuration, deployment hardening,
+> operational monitoring, and product-specific legal and security review.
 
-[Get the current starter kit on Gumroad — $129 one-time](https://shehroz2009.gumroad.com/l/launchpad_saas_starter_kit)
+[View Launchpad on Gumroad](https://shehroz2009.gumroad.com/)
 
-## Preview
+## Product preview
 
-![Launchpad landing page](./screenshots/01-landing-dark.png)
+![Launchpad public product experience](./screenshots/01-landing-dark.png)
 
-| Dashboard                                             | Pricing                                       |
+| Customer workspace                                    | Pricing                                       |
 | ----------------------------------------------------- | --------------------------------------------- |
 | ![Customer dashboard](./screenshots/05-dashboard.png) | ![Pricing page](./screenshots/03-pricing.png) |
 
-Browse the [English product screenshots](./screenshots/) or see the localized
-landing and pricing pages for [all 17 other locales](./docs/FEATURES.md#localization).
+Browse the [English product screenshots](./screenshots/) or explore localized
+landing and pricing pages for [all 18 locales](./docs/FEATURES.md#localization).
 
-## What is included
+## What Launchpad includes
 
-- Next.js 15, React 19, TypeScript, and Tailwind CSS 4.
-- PostgreSQL and Prisma, with migrations and a local Docker Compose database.
-- Auth.js sign-in by email link, optional Google/GitHub OAuth, protected routes,
-  TOTP multi-factor authentication, and recovery codes.
-- Stripe subscriptions, one-time checkout, Customer Portal, signed webhooks,
-  and Apple App Store / Google Play purchase verification.
-- A responsive customer dashboard and server-authorized admin areas.
-- Optional modules for analytics, email campaigns, AI, organizations,
-  notifications, support, publishing, marketing, storage, and more.
-- A guided project setup wizard, GitHub Actions checks, and deployment guides.
+- **Customer accounts:** localized email sign-in, optional Google/GitHub OAuth,
+  protected routes, TOTP multi-factor authentication, and recovery codes.
+- **Billing:** Stripe subscriptions, one-time checkout, Customer Portal, signed
+  webhooks, and optional Apple App Store / Google Play purchase verification.
+- **Administration:** role-protected controls for users, security, analytics,
+  integrations, content, support, and enabled modules.
+- **Product workspace:** account settings, notifications, support, billing
+  history, and optional organization and collaboration features.
+- **Product capabilities:** optional modules for email campaigns, AI, publishing,
+  marketing, storage, community, referrals, and more.
+- **Operations:** guided first-run configuration, PostgreSQL and Prisma
+  migrations, automated checks, and deployment documentation.
 
-## Current capabilities
-
-The project includes public landing and pricing pages, customer account flows,
-admin tools, content publishing, product analytics, notification delivery,
-security controls, and supported customization settings. Modules can be
-selected during first-run setup, but the application remains a modular
-monolith: selected features share the same application and database
-infrastructure.
-
-Provider-backed features require your own provider accounts, credentials, and
-configuration. The setup wizard can test selected credentials, but it does not
-create accounts, complete OAuth consent, provision cloud infrastructure, or
-guarantee every production permission.
+Provider-backed capabilities require your own provider accounts, credentials,
+and configuration. The setup wizard can test selected credentials, but it does
+not create accounts, complete OAuth consent, provision cloud infrastructure, or
+verify every production permission.
 
 See the [feature matrix](./docs/FEATURES.md) and the detailed
-[implementation guide](./docs/FEATURE-GUIDE.md) for the exact current scope,
-requirements, and limitations.
+[implementation and operations guide](./docs/FEATURE-GUIDE.md) for current
+scope, requirements, and limitations.
 
-## Architecture at a glance
+## How the application is structured
 
 ```mermaid
 flowchart LR
-  Visitor[Customer browser] --> App[Next.js application]
+  Visitor[Customer browser] --> App[Launchpad Next.js application]
   App --> Auth[Auth.js authentication]
-  App --> DB[(PostgreSQL via Prisma)]
-  App --> Stripe[Stripe checkout and billing portal]
-  Stripe --> Webhook[Signed provider webhooks]
+  App --> DB[(Shared PostgreSQL via Prisma)]
+  App --> Stripe[Stripe billing]
+  Stripe --> Webhook[Verified provider webhooks]
   Webhook --> DB
   App --> Email[Resend, SendGrid, or SMTP]
   App --> Storage[Optional S3-compatible storage]
 ```
 
-## Stack
+The application uses modular boundaries inside one deployable codebase.
+Selected modules reuse the same application and database infrastructure;
+module selection does not turn them into independent services or databases.
+
+## Technology
 
 | Area           | Technology                                                    |
 | -------------- | ------------------------------------------------------------- |
-| Application    | Next.js 15, React 19, TypeScript                              |
+| Application    | Next.js 16, React 19, TypeScript                              |
 | Styling        | Tailwind CSS 4, reusable shadcn/ui-compatible components      |
 | Authentication | Auth.js, email links, optional Google/GitHub OAuth            |
 | Data           | PostgreSQL, Prisma                                            |
@@ -81,32 +80,32 @@ flowchart LR
 | Quality        | ESLint, Prettier, TypeScript checks, automated tests          |
 | Deployment     | GitHub Actions checks; Vercel integration and host guides     |
 
-## Quick start
+## Start locally
 
 Use Node.js 20.9 or newer (Node.js 22 LTS recommended), Docker Compose, and
-PostgreSQL 14 or newer. From a clean project archive or checkout, start the
-local database if using Docker, then run:
+PostgreSQL 14 or newer. From the project directory:
 
 ```bash
 docker compose up -d
 npm run setup
 ```
 
-The setup wizard selects modules and deployment target, collects settings, and
-offers provider checks where supported. Read the full
+The setup wizard configures the selected modules and deployment target, gathers
+settings, and offers provider checks where supported. Read the
 [quickstart guide](./docs/QUICKSTART.md) before configuring a real deployment.
 
 ## Documentation
 
 - [Quickstart and configuration](./docs/QUICKSTART.md)
 - [Feature matrix and current scope](./docs/FEATURES.md)
-- [Full implementation and operations guide](./docs/FEATURE-GUIDE.md)
+- [Implementation and operations guide](./docs/FEATURE-GUIDE.md)
 - [Vercel deployment checklist](./docs/VERCEL.md)
-- [Screenshots](./screenshots/)
+- [Product screenshots](./screenshots/)
 
 ## License and purchase
 
-The project is a commercial starter kit, not a hosted SaaS subscription.
-Purchase terms and permitted use are defined by the included
-[LICENSE](./LICENSE). The current version is provided as a one-time purchase;
-ongoing support and future updates are not promised.
+Launchpad is licensed software for developing and operating one product or
+service. The license does not permit redistributing Launchpad or its source.
+Review the included [LICENSE](./LICENSE) and the current Gumroad listing for
+purchase terms, price, and availability. Launchpad is application software you
+run and operate; it is not a hosted SaaS subscription.
