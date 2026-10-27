@@ -201,9 +201,9 @@ records will be quarantined and need to be reinstalled.
 
 ## Independently deployable services
 
-The app remains a modular monolith by default. Its optional PostgreSQL
-transactional outbox lets separately deployed consumers process account
-events without making profile updates depend on those consumers. Apply the
+The application runs as one deployable system by default. Its optional
+PostgreSQL transactional outbox lets separately deployed consumers process
+account events without making profile updates depend on those consumers. Apply the
 `20261023160000_service_events` migration and set a unique server-only
 `SERVICE_API_KEY` of at least 32 characters to enable the feed. If the key is
 unset, event writes and the feed are disabled while account flows continue to

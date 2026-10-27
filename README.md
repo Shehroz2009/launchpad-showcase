@@ -1,12 +1,13 @@
-# Launchpad — Modular SaaS Monolith with Production-Ready Admin & Security
+# Launchpad — A Full-Scale SaaS Foundation
 
 **Launch a SaaS product without assembling its core systems from scratch.**
 
-Launchpad is a modular SaaS application: one cohesive Next.js codebase and
-shared PostgreSQL data model for customer accounts, billing, administration,
-content, and optional product capabilities. It is built for teams that want
-control over their application and infrastructure—not a hosted service or a
-collection of separately deployed services.
+Launchpad is a full-scale SaaS product foundation: one cohesive Next.js
+codebase and shared PostgreSQL data model for payments, authentication,
+analytics, administration, customer workspaces, content, and optional product
+capabilities. It is built for teams that want control over their application
+and infrastructure—not a hosted service or a collection of separately
+deployed services.
 
 > Launchpad includes production-oriented administration and security
 > capabilities, but it does not make a product production-ready by itself.

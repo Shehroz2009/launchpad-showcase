@@ -1,10 +1,10 @@
 # Feature matrix
 
-Launchpad is a modular SaaS monolith: selected capabilities run in one
-application and share its PostgreSQL data model. This matrix describes the
-current implementation, not externally provisioned provider accounts,
-production infrastructure, or credentials. Integrations require setup in the
-provider and in your deployment environment.
+Launchpad is a full-scale SaaS product foundation with modular capabilities
+that run in one application and share its PostgreSQL data model. This matrix
+describes the current implementation, not externally provisioned provider
+accounts, production infrastructure, or credentials. Integrations require
+setup in the provider and in your deployment environment.
 
 ## Product capabilities
 
@@ -46,7 +46,7 @@ provider and in your deployment environment.
 | Onboarding                | Account-owned resumable checklist for profile, security, and dashboard orientation.                                                                                                                                                                                               |
 | Plugins                   | Admin marketplace installs/toggles reviewed source-bundled plugins with signed installation state. Arbitrary uploads, marketplace downloads, and execution of buyer/database-provided code are not supported.                                                                     |
 | CI/CD                     | GitHub Actions validates pull requests and `main`; Vercel Git integration can deploy previews/production, and production builds run migrations. No universal release orchestrator or workflow pack for every host.                                                                |
-| Microservices             | Transactional event outbox, cursor-based read-only API, and separately deployable relay; currently emits the account-profile event. The app remains a modular monolith, not independently owned domain services.                                                                  |
+| Microservices             | Transactional event outbox, cursor-based read-only API, and separately deployable relay; currently emits the account-profile event. The application is one deployable system, not a set of independently owned domain services.                                                 |
 | Marketing                 | UTM links, attributed public-page/CTA/newsletter/checkout reporting, and scheduled email sequences for new newsletter signups. No arbitrary analytics-event triggers/actions or cross-channel behavioral automation.                                                              |
 | Community                 | Localized forum with topics/replies, abuse reports, admin moderation, pinning, and locked threads.                                                                                                                                                                                |
 | Product updates           | Localized versioned changelog with drafts, publishing, Markdown, and sitemap integration; separate from blog/CMS.                                                                                                                                                                 |
@@ -88,7 +88,7 @@ examples, and landing/pricing screenshots for each non-English locale:
 
 ## Architecture and quality
 
-Launchpad uses Next.js 15, React 19, strict TypeScript, Tailwind CSS 4,
+Launchpad uses Next.js 16, React 19, strict TypeScript, Tailwind CSS 4,
 PostgreSQL/Prisma, and Auth.js v5. Selected modules share the same application
 and database infrastructure. The repo also configures ESLint, Prettier, Husky,
 lint-staged, automated tests, and GitHub Actions.
