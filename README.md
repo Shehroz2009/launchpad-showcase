@@ -14,7 +14,7 @@ deployed services.
 > You remain responsible for provider configuration, deployment hardening,
 > operational monitoring, and product-specific legal and security review.
 
-[View Launchpad on Gumroad](https://shehroz2009.gumroad.com/)
+[View Launchpad on Gumroad](https://shehroz2009.gumroad.com/l/launchpad-full-scale-saas-foundation)
 
 ## Product preview
 
