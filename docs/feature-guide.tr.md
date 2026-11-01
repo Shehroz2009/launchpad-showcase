@@ -2,11 +2,17 @@
 
 Bu kılavuz, potansiyel alıcılar için Launchpad başlangıç kitinin kısa bir genel bakışıdır. Kiti nelerin içerdiğini, nelerin harici hizmetler veya yapılandırma gerektirdiğini ve kitin otomatik olarak sağlamadığı şeyleri özetler. Satın alınan projenin tam özellik kılavuzu ve kaynak kodu, yetkili uygulama referansları olarak kalır.
 
+## Satın alma, güncellemeler ve destek
+
+Launchpad aktif olarak geliştirilir ve düzenli ürün güncellemeleri alır. Her iki satın alma planı da güncellemeleri ve geliştiriciden doğrudan desteği içerir. Aylık 129 $ tutarındaki abonelik, etkin olduğu sürece erişim, güncellemeler ve destek sağlar. Tek seferlik 299 $ tutarındaki Lifetime satın alımı ise ürünün ömrü boyunca erişim, güncellemeler ve destek sağlar. Launchpad, sizin barındırıp işlettiğiniz bir yazılımdır; barındırılan bir SaaS hizmeti değildir. Barındırma ve üçüncü taraf sağlayıcı ücretleri ayrıca ödenir.
+
 ## Launchpad'in içerdiği özellikler
 
 Launchpad, tek bir ortak kod tabanı üzerinde inşa edilmiş modüler bir SaaS uygulamasıdır. İsteğe bağlı modülleri; faturalama, yapay zekâ sohbeti, organizasyonlar, yayınlama, destek, topluluk, bildirimler, e-posta pazarlama, analitik, yönlendirmeler, reklamcılık, SEO, entegrasyonlar ve özel dosya depolamayı kapsar. Kurulum sihirbazı, hangi isteğe bağlı modüllerin korunacağına ve bir dağıtım hedefine karar vermenizi sağlar. Temel hesap, güvenlik, ayarlar ve ortak veritabanı bileşenleri yerinde kalır.
 
-Bir Git kontrolünde, kurulum sparse-checkout kullanır; bu sayede hariç tutulan izlenen dosyalar Git geçmişinde kalır. Satın alınan bir ZIP dosyasında ise hariç tutulan modül dosyaları çıkarılan projeden kaldırılır; ZIP dosyası depo meta verilerini içermediği için bu dosyalar Git geçmişinden geri alınamaz. Bu, yerinde modül değiştirme aracı değil, tek seferlik bir kurulumdur. Daha sonra hariç tutulan kaynakları kurtarmak isterseniz, yapılandırmadan önce çıkarılan ZIP dosyasını yedekleyin.
+Dahil edilen Docker Compose dosyası yerel geliştirme için PostgreSQL ve Mailpit’i başlatır, Launchpad uygulamasını değil. Uygulamanın dağıtımı için uygulama, veritabanı ve sağlayıcılar ayrıca yapılandırılmalıdır.
+
+Bir Git kontrolünde, kurulum sparse-checkout kullanır; bu sayede hariç tutulan izlenen dosyalar Git geçmişinde kalır. Bu, yerinde modül değiştirme aracı değil, tek seferlik bir kurulumdur.
 
 Sihirbaz, seçilen modülleri ve dağıtım tercihlerini `launchpad.config.json` dosyasına, sağlayıcı gizli anahtarlarını ise Git tarafından yok sayılan `.env` dosyasına yazar. **Bağlantıyı test et** seçeneğini açıkça seçtiğinizde seçilen sağlayıcı kimlik bilgilerini kontrol edebilir. Sağlayıcı hesapları oluşturmaz, altyapı dağıtmaz veya harici panoları yapılandırmaz. Bu hizmetleri yine kendiniz tamamlamanız ve sürdürmeniz gerekir.
 

@@ -7,16 +7,24 @@ provide its runtime, database, provider accounts, and production credentials.
 
 - Node.js 20.9 or newer; Node.js 22 LTS is recommended.
 - npm.
-- Docker Desktop or another Docker Compose-compatible runtime for the included
-  local PostgreSQL service, or a PostgreSQL 14+ database.
+- PostgreSQL 14+; Docker Desktop or another Docker Compose-compatible runtime
+  is optional if you want to use the included local PostgreSQL and Mailpit.
 
 ## First run
 
-Start the local database before setup if you plan to use Docker Compose. From a
-clean project archive or checkout, run:
+Clone the repository before setup. The included Compose configuration provides
+optional local PostgreSQL and Mailpit services; it does not run the Launchpad
+application. After setup, the wizard tells you whether a local service is
+needed and which Compose command to use.
 
 ```bash
-docker compose up -d
+git clone https://github.com/Shehroz2009/Launchpad.git
+cd Launchpad
+```
+
+Run the setup wizard:
+
+```bash
 npm run setup
 ```
 
@@ -25,10 +33,10 @@ collects settings, and offers provider checks for supported credentials. Keep
 the terminal open and follow the local URL printed by the wizard.
 
 Setup is a one-time operation. Applying module selection removes unselected
-module source from the extracted project. In particular, an archive has no Git
-history from which to recover removed files; keep an untouched copy if you may
-need other modules later. In a clean Git checkout, setup requires a clean
-working tree and applies sparse-checkout selection.
+module source from the working tree through Git sparse-checkout; the source
+remains in the repository and can be restored later. Setup requires a clean
+Git working tree and does not support downloaded ZIP archives or copied source
+folders.
 
 The wizard does not create provider accounts, complete interactive OAuth
 authorization, or provision cloud resources. Provider checks validate a

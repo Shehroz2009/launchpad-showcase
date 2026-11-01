@@ -2,11 +2,17 @@
 
 Hướng dẫn này là bản tóm tắt ngắn gọn về bộ công cụ khởi động Launchpad dành cho các nhà mua hàng tiềm năng. Nó tóm tắt những gì được bao gồm, những gì yêu cầu dịch vụ bên ngoài hoặc cấu hình, và những gì bộ công cụ không cung cấp một cách tự động. Hướng dẫn tính năng đầy đủ và mã nguồn của dự án đã mua vẫn là các tài liệu tham chiếu triển khai có thẩm quyền.
 
+## Mua hàng, cập nhật và hỗ trợ
+
+Launchpad được duy trì tích cực và liên tục nhận các bản cập nhật sản phẩm. Cả hai gói mua đều bao gồm cập nhật và hỗ trợ trực tiếp từ nhà phát triển. Bạn có thể chọn gói đăng ký 129 USD mỗi tháng, bao gồm quyền truy cập, cập nhật và hỗ trợ khi gói còn hiệu lực, hoặc mua Lifetime một lần với giá 299 USD, bao gồm quyền truy cập, cập nhật và hỗ trợ trong suốt vòng đời sản phẩm. Launchpad là phần mềm do bạn tự lưu trữ và vận hành, không phải dịch vụ SaaS được lưu trữ sẵn; phí lưu trữ và nhà cung cấp bên thứ ba được tính riêng.
+
 ## Những gì Launchpad bao gồm
 
 Launchpad là một ứng dụng SaaS mô-đun được xây dựng trên một mã nguồn chung duy nhất. Các mô-đun tùy chọn của nó bao gồm thanh toán, trò chuyện AI, tổ chức, xuất bản, hỗ trợ, cộng đồng, thông báo, tiếp thị qua email, phân tích, giới thiệu, quảng cáo, SEO, tích hợp và lưu trữ tệp riêng tư. Trình hướng dẫn cài đặt cho phép bạn chọn các mô-đun tùy chọn cần giữ lại và mục tiêu triển khai. Các thành phần tài khoản, bảo mật, cài đặt và cơ sở dữ liệu dùng chung cốt lõi vẫn được giữ nguyên.
 
-Trong một bản sao Git, quá trình cài đặt sử dụng sparse-checkout để các tệp được theo dõi nhưng bị loại trừ vẫn còn trong lịch sử Git. Trong một tệp ZIP đã mua, các tệp mô-đun bị loại trừ sẽ được xóa khỏi dự án đã giải nén; chúng không thể được khôi phục từ lịch sử Git vì tệp ZIP không chứa siêu dữ liệu kho lưu trữ. Đây là một lần cài đặt duy nhất, không phải là công cụ chuyển đổi mô-đun tại chỗ. Hãy sao lưu tệp ZIP đã giải nén trước khi cấu hình nếu bạn có thể muốn khôi phục mã nguồn bị loại trừ sau này.
+ Việc triển khai ứng dụng cần cấu hình riêng ứng dụng, cơ sở dữ liệu và nhà cung cấp.
+
+Trong một bản sao Git, quá trình cài đặt sử dụng sparse-checkout để các tệp được theo dõi nhưng bị loại trừ vẫn còn trong lịch sử Git. Đây là một lần cài đặt duy nhất, không phải là công cụ chuyển đổi mô-đun tại chỗ.
 
 Trình hướng dẫn ghi các mô-đun đã chọn và sở thích triển khai vào
 `launchpad.config.json`, và các bí mật nhà cung cấp vào tệp `.env` bị Git bỏ qua.

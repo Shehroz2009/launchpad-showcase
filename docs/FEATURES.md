@@ -6,6 +6,15 @@ describes the current implementation, not externally provisioned provider
 accounts, production infrastructure, or credentials. Integrations require
 setup in the provider and in your deployment environment.
 
+## Purchase and maintenance
+
+Launchpad is actively maintained and receives ongoing product updates. Both
+purchase plans include updates and direct support from the developer: a
+$129/month subscription includes access, updates, and support while active; a
+one-time $299 Lifetime purchase includes ongoing access, updates, and support
+for the product's lifetime. Launchpad is self-hosted software, not a hosted
+SaaS service; hosting and third-party provider fees are separate.
+
 ## Product capabilities
 
 | Area                      | Current implementation and boundaries                                                                                                                                                                                                                                             |

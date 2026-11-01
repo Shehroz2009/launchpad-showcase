@@ -2,11 +2,17 @@
 
 Dieser Leitfaden bietet eine knappe Übersicht des Launchpad-Starterkits für potenzielle Käufer. Er fasst zusammen, was enthalten ist, was externe Dienste oder Konfiguration erfordert und was das Kit nicht automatisch bereitstellt. Der vollständige Funktionsleitfaden und der Quellcode des gekauften Projekts bleiben die maßgeblichen Referenzen für die Implementierung.
 
+## Kauf, Updates und Support
+
+Launchpad wird aktiv gepflegt und erhält laufend Produktupdates. Beide Kaufoptionen umfassen Updates und direkten Support durch den Entwickler. Sie können ein Abonnement für 129 $ pro Monat wählen; Zugriff, Updates und Support gelten, solange das Abonnement aktiv ist. Alternativ gibt es den einmaligen Lifetime-Kauf für 299 $, der Zugriff, Updates und Support für die gesamte Lebensdauer des Produkts umfasst. Launchpad ist selbst gehostete Software und kein gehosteter SaaS-Dienst; Hosting und Gebühren externer Anbieter sind separat.
+
 ## Was Launchpad enthält
 
 Launchpad ist eine modulare SaaS-Anwendung, die auf einer gemeinsamen Codebasis aufgebaut ist. Die optionalen Module umfassen Abrechnung, KI-Chat, Organisationen, Veröffentlichung, Support, Community, Benachrichtigungen, E-Mail-Marketing, Analysen, Empfehlungen, Werbung, SEO, Integrationen und privaten Dateispeicher. Der Einrichtungswizard ermöglicht es Ihnen, auszuwählen, welche optionalen Module beibehalten und welches Bereitstellungsziel verwendet werden soll. Die Kernkomponenten für Konten, Sicherheit, Einstellungen und die gemeinsame Datenbank bleiben bestehen.
 
-Bei einem Git-Checkout verwendet die Einrichtung sparse-checkout, sodass ausgeschlossene, aber nachverfolgte Dateien in der Git-Verlaufshistorie verbleiben. In einem gekauften ZIP-Archiv werden die Dateien der ausgeschlossenen Module aus dem entpackten Projekt entfernt; sie können nicht aus der Git-Verlaufshistorie wiederhergestellt werden, da das ZIP keine Repository-Metadaten enthält. Dies ist eine einmalige Einrichtung und kein Werkzeug zum Umschalten von Modulen an Ort und Stelle. Sichern Sie das entpackte ZIP vor der Konfiguration, falls Sie möglicherweise später ausgeschlossenen Quellcode wiederherstellen möchten.
+ Anwendung, Datenbank und Anbieter müssen für die Bereitstellung separat konfiguriert werden.
+
+ Bei einem Git-Checkout verwendet die Einrichtung sparse-checkout, sodass ausgeschlossene, aber nachverfolgte Dateien in der Git-Verlaufshistorie verbleiben. Dies ist eine einmalige Einrichtung und kein Werkzeug zum Umschalten von Modulen an Ort und Stelle.
 
 Der Wizard schreibt die ausgewählten Module und Bereitstellungseinstellungen in `launchpad.config.json` und die Anbieter-Geheimnisse in die von Git ignorierte Datei `.env`. Er kann die ausgewählten Anbieter-Zugangsdaten überprüfen, wenn Sie explizit **Verbindung testen** wählen. Er erstellt keine Anbieterkonten, stellt keine Infrastruktur bereit und konfiguriert keine externen Dashboards. Sie müssen diese Dienste weiterhin selbst abschließen und warten.
 

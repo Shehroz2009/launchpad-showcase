@@ -2,11 +2,17 @@
 
 Questa guida è una panoramica concisa del kit di avvio Launchpad destinata ai potenziali acquirenti. Riassume cosa è incluso, cosa richiede servizi esterni o configurazione e cosa il kit non fornisce automaticamente. La guida completa delle funzionalità e il codice sorgente del progetto acquistato rimangono i riferimenti autoritativi per l'implementazione.
 
+## Acquisto, aggiornamenti e supporto
+
+Launchpad è mantenuto attivamente e riceve aggiornamenti continui. Entrambi i piani di acquisto includono aggiornamenti e supporto diretto dello sviluppatore. Puoi scegliere un abbonamento da 129 $ al mese, che include accesso, aggiornamenti e supporto finché è attivo, oppure l'acquisto Lifetime con pagamento unico di 299 $, che include accesso, aggiornamenti e supporto per tutta la durata del prodotto. Launchpad è un software che ospiti e gestisci autonomamente, non un servizio SaaS ospitato; i costi di hosting e dei provider di terze parti sono separati.
+
 ## Cosa include Launchpad
 
 Launchpad è un'applicazione SaaS modulare costruita su un'unica base di codice condivisa. I suoi moduli opzionali coprono fatturazione, chat AI, organizzazioni, pubblicazione, supporto, community, notifiche, marketing via email, analisi, referral, pubblicità, SEO, integrazioni e archiviazione privata dei file. La procedura guidata di configurazione consente di scegliere quali moduli opzionali mantenere e un target di deployment. I componenti principali per account, sicurezza, impostazioni e database condiviso rimangono invariati.
 
-In un checkout Git, la configurazione utilizza sparse-checkout, quindi i file tracciati esclusi rimangono nella cronologia di Git. In un ZIP acquistato, i file dei moduli esclusi vengono rimossi dal progetto estratto; non possono essere ripristinati dalla cronologia di Git perché il ZIP non contiene i metadati del repository. Questa è una configurazione una tantum, non uno strumento di commutazione dei moduli in loco. Effettuare un backup del ZIP estratto prima di configurarlo se si potrebbe voler recuperare successivamente il codice sorgente escluso.
+ Il deployment dell’applicazione richiede la configurazione separata dell’app, del database e dei provider.
+
+In un checkout Git, la configurazione utilizza sparse-checkout, quindi i file tracciati esclusi rimangono nella cronologia di Git. Questa è una configurazione una tantum, non uno strumento di commutazione dei moduli in loco.
 
 La procedura guidata scrive i moduli selezionati e le preferenze di deployment in `launchpad.config.json`, e i segreti dei provider nel file `.env` ignorato da Git. Può verificare le credenziali dei provider selezionati quando si sceglie esplicitamente **Testa connessione**. Non crea account dei provider, non distribuisce infrastrutture e non configura dashboard esterni. È comunque necessario completare e mantenere quei servizi in autonomia.
 

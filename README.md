@@ -83,11 +83,19 @@ module selection does not turn them into independent services or databases.
 
 ## Start locally
 
-Use Node.js 20.9 or newer (Node.js 22 LTS recommended), Docker Compose, and
-PostgreSQL 14 or newer. From the project directory:
+Use Node.js 20.9 or newer (Node.js 22 LTS recommended) and PostgreSQL 14 or
+newer. The included Compose file provides optional local PostgreSQL and
+Mailpit services; it does not run the Launchpad application. Clone the
+repository and run setup from the project directory:
 
 ```bash
-docker compose up -d
+git clone https://github.com/Shehroz2009/Launchpad.git
+cd Launchpad
+```
+
+Then run the setup wizard:
+
+```bash
 npm run setup
 ```
 
@@ -107,6 +115,11 @@ settings, and offers provider checks where supported. Read the
 
 Launchpad is licensed software for developing and operating one product or
 service. The license does not permit redistributing Launchpad or its source.
-Review the included [LICENSE](./LICENSE) and the current Gumroad listing for
-purchase terms, price, and availability. Launchpad is application software you
-run and operate; it is not a hosted SaaS subscription.
+Launchpad is actively maintained and receives ongoing product updates. Both
+purchase plans include updates and direct support from the developer. Choose a
+$129/month subscription, which includes access, updates, and support while
+active, or a one-time $299 Lifetime purchase, which includes ongoing access,
+updates, and support for the product's lifetime. Launchpad is application
+software you run and operate, not a hosted SaaS service; hosting and third-party
+provider fees are separate. Review the included [LICENSE](./LICENSE) for the
+license terms.

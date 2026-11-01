@@ -2,11 +2,17 @@
 
 Este guia é uma visão geral concisa do kit inicial do Launchpad para potenciais compradores. Ele resume o que está incluído, o que requer serviços externos ou configuração e o que o kit não fornece automaticamente. O guia completo de recursos e o código-fonte do projeto adquirido permanecem como as referências autoritativas de implementação.
 
+## Compra, atualizações e suporte
+
+O Launchpad é mantido ativamente e recebe atualizações contínuas. Ambos os planos de compra incluem atualizações e suporte direto do desenvolvedor. Você pode escolher uma assinatura de US$ 129 por mês, que inclui acesso, atualizações e suporte enquanto estiver ativa, ou uma compra Lifetime de US$ 299 em pagamento único, que inclui acesso, atualizações e suporte durante toda a vida útil do produto. O Launchpad é um software que você hospeda e opera, não um serviço SaaS hospedado; hospedagem e tarifas de provedores terceirizados são cobradas à parte.
+
 ## O que o Launchpad inclui
 
 O Launchpad é uma aplicação SaaS modular construída sobre uma única base de código compartilhada. Seus módulos opcionais abrangem faturamento, chat de IA, organizações, publicação, suporte, comunidade, notificações, marketing por e-mail, análise de dados, indicações, publicidade, SEO, integrações e armazenamento privado de arquivos. O assistente de configuração permite escolher quais módulos opcionais manter e um destino de implantação. Os componentes principais de conta, segurança, configurações e banco de dados compartilhado permanecem no lugar.
 
-Em um checkout Git, a configuração usa sparse-checkout, de modo que os arquivos rastreados excluídos permanecem no histórico do Git. Em um ZIP adquirido, os arquivos de módulos excluídos são removidos do projeto extraído; eles não podem ser restaurados do histórico do Git porque o ZIP não contém metadados do repositório. Esta é uma configuração única, não uma ferramenta de alternância de módulos in-place. Faça backup do ZIP extraído antes de configurá-lo, caso queira recuperar o código-fonte excluído posteriormente.
+ A implantação do aplicativo exige configurar separadamente o app, o banco de dados e os provedores.
+
+Esta é uma configuração única, não uma ferramenta de alternância de módulos in-place.
 
 O assistente grava os módulos selecionados e as preferências de implantação em
 `launchpad.config.json`, e os segredos dos provedores no arquivo `.env` ignorado pelo Git.

@@ -2,11 +2,17 @@
 
 Esta guía es un resumen conciso del kit inicial de Launchpad para compradores potenciales. Resume lo que está incluido, lo que requiere servicios externos o configuración, y lo que el kit no proporciona automáticamente. La guía completa de funciones y el código fuente del proyecto adquirido siguen siendo las referencias autorizadas de implementación.
 
+## Compra, actualizaciones y soporte
+
+Launchpad se mantiene activamente y recibe actualizaciones continuas. Ambos planes de compra incluyen actualizaciones y soporte directo del desarrollador. Puedes elegir una suscripción de 129 $ al mes, que incluye acceso, actualizaciones y soporte mientras esté activa, o una compra Lifetime de 299 $ en un único pago, que incluye acceso, actualizaciones y soporte durante toda la vida del producto. Launchpad es software que alojas y operas tú, no un servicio SaaS alojado; el alojamiento y las tarifas de proveedores externos se pagan por separado.
+
 ## Qué incluye Launchpad
 
 Launchpad es una aplicación SaaS modular construida sobre una base de código compartida. Sus módulos opcionales cubren facturación, chat de IA, organizaciones, publicación, soporte, comunidad, notificaciones, marketing por correo electrónico, analítica, referidos, publicidad, SEO, integraciones y almacenamiento privado de archivos. El asistente de configuración le permite elegir qué módulos opcionales conservar y un destino de despliegue. Los componentes centrales de cuenta, seguridad, configuración y base de datos compartida permanecen en su lugar.
 
-En una extracción de Git, la configuración utiliza sparse-checkout, por lo que los archivos rastreados excluidos permanecen en el historial de Git. En un ZIP adquirido, los archivos de los módulos excluidos se eliminan del proyecto extraído; no pueden restaurarse desde el historial de Git porque el ZIP no contiene metadatos del repositorio. Esta es una configuración de una sola vez, no una herramienta de conmutación de módulos en el lugar. Realice una copia de seguridad del ZIP extraído antes de configurarlo si es posible que desee recuperar el código fuente excluido más adelante.
+ El despliegue de la aplicación requiere configurar por separado la aplicación, la base de datos y los proveedores.
+
+Esta es una configuración de una sola vez, no una herramienta de conmutación de módulos en el lugar.
 
 El asistente escribe los módulos seleccionados y las preferencias de despliegue en `launchpad.config.json`, y los secretos de los proveedores en el archivo `.env` ignorado por Git. Puede verificar las credenciales de los proveedores seleccionados cuando elige explícitamente **Probar conexión**. No crea cuentas de proveedor, no despliega infraestructura ni configura paneles de control externos. Aún debe completar y mantener esos servicios usted mismo.
 

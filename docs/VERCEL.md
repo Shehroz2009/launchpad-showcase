@@ -6,8 +6,8 @@ Configure the application, database, secrets, and provider accounts separately.
 
 ## Before deployment
 
-1. Run `npm run setup` from a clean project archive or checkout and select the
-   modules you intend to deploy.
+1. Clone the Launchpad repository, run `npm run setup` from the clean clone,
+   and select the modules you intend to deploy.
 2. Create a Vercel project connected to the configured Git repository.
 3. Provision PostgreSQL. Configure a pooled runtime connection for
    `DATABASE_URL` when required by your database provider and a direct

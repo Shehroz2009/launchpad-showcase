@@ -15,12 +15,22 @@ SEO, integrations, and private file storage. The setup wizard lets you choose
 which optional modules to retain and a deployment target. Core account,
 security, settings, and shared database components remain in place.
 
-In a Git checkout, setup uses sparse-checkout so excluded tracked files remain
-in Git history. In a purchased ZIP, excluded module files are removed from the
-extracted project; they cannot be restored from Git history because the ZIP
-does not contain repository metadata. This is a one-time setup, not an
-in-place module-switching tool. Back up the extracted ZIP before configuring
-it if you may want to recover excluded source later.
+ Deploying the application requires separately configuring the app, database, and providers.
+
+Setup requires a clean Git clone and uses sparse-checkout so excluded tracked
+files disappear from the working tree but remain in the repository and Git
+history. Downloaded ZIP archives and copied source folders are not supported.
+This is a one-time setup, not an in-place module-switching tool; start again
+from a fresh clone to change the selected modules after setup.
+
+## Purchase, updates, and support
+
+Launchpad is actively maintained and receives ongoing product updates. Both
+purchase plans include updates and direct support from the developer. A
+$129/month subscription includes access, updates, and support while active; a
+one-time $299 Lifetime purchase includes ongoing access, updates, and support
+for the product's lifetime. Launchpad is self-hosted software, not a hosted SaaS
+service; hosting and third-party provider fees are separate.
 
 The wizard writes selected modules and deployment preferences to
 `launchpad.config.json`, and provider secrets to the Git-ignored `.env` file.

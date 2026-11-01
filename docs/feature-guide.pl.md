@@ -2,11 +2,17 @@
 
 Ten przewodnik stanowi zwięzły przegląd zestawu startowego Launchpad dla potencjalnych nabywców. Podsumowuje, co jest w nim zawarte, co wymaga zewnętrznych usług lub konfiguracji, oraz czego zestaw nie zapewnia automatycznie. Pełny przewodnik po funkcjach i kod źródłowy zakupionego projektu pozostają autorytatywnymi referencjami implementacyjnymi.
 
+## Zakup, aktualizacje i wsparcie
+
+Launchpad jest aktywnie utrzymywany i regularnie otrzymuje aktualizacje. Oba warianty zakupu obejmują aktualizacje oraz bezpośrednie wsparcie dewelopera. Możesz wybrać subskrypcję za 129 $ miesięcznie, która zapewnia dostęp, aktualizacje i wsparcie, gdy jest aktywna, albo jednorazowy zakup Lifetime za 299 $, który zapewnia dostęp, aktualizacje i wsparcie przez cały okres istnienia produktu. Launchpad to oprogramowanie hostowane i obsługiwane samodzielnie, a nie usługa SaaS hostowana przez dostawcę; koszty hostingu i usług zewnętrznych dostawców są osobne.
+
 ## Co zawiera Launchpad
 
 Launchpad to modułowa aplikacja SaaS zbudowana na jednej wspólnej bazie kodu. Jej opcjonalne moduły obejmują rozliczenia, czat AI, organizacje, publikację, wsparcie, społeczność, powiadomienia, marketing e-mailowy, analitykę, polecenia, reklamę, SEO, integracje oraz prywatne przechowywanie plików. Kreator konfiguracji pozwala wybrać, które opcjonalne moduły zachować, oraz cel wdrożenia. Komponenty podstawowe dotyczące kont, bezpieczeństwa, ustawień i wspólnej bazy danych pozostają w miejscu.
 
-W przypadku pobrania przez Git, konfiguracja używa sparse-checkout, więc wykluczone śledzone pliki pozostają w historii Git. W przypadku zakupionego archiwum ZIP, pliki wykluczonych modułów są usuwane z rozpakowanego projektu; nie można ich przywrócić z historii Git, ponieważ archiwum ZIP nie zawiera metadanych repozytorium. Jest to jednorazowa konfiguracja, a nie narzędzie do przełączania modułów w miejscu. Wykonaj kopię zapasową rozpakowanego archiwum ZIP przed jego skonfigurowaniem, jeśli w przyszłości możesz chcieć odzyskać wykluczony kod źródłowy.
+ Wdrożenie aplikacji wymaga osobnej konfiguracji aplikacji, bazy danych i dostawców.
+
+W przypadku pobrania przez Git, konfiguracja używa sparse-checkout, więc wykluczone śledzone pliki pozostają w historii Git. Jest to jednorazowa konfiguracja, a nie narzędzie do przełączania modułów w miejscu.
 
 Kreator zapisuje wybrane moduły i preferencje wdrożeniowe w
 `launchpad.config.json`, a sekrety dostawców w pliku `.env` ignorowanym przez Git.

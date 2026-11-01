@@ -6,6 +6,10 @@ configuratie vereist, en wat de kit niet automatisch biedt. De volledige
 functie-gids en broncode van het aangekochte project blijven de
 autoritatieve implementatierferenties.
 
+## Aankoop, updates en ondersteuning
+
+Launchpad wordt actief onderhouden en ontvangt doorlopend productupdates. Beide aankoopopties omvatten updates en directe ondersteuning van de ontwikkelaar. Je kunt kiezen voor een abonnement van $129 per maand, met toegang, updates en ondersteuning zolang het actief is, of voor een eenmalige Lifetime-aankoop van $299, met toegang, updates en ondersteuning gedurende de levensduur van het product. Launchpad is software die je zelf host en beheert, geen gehoste SaaS-dienst; hosting en kosten van externe providers zijn apart.
+
 ## Wat Launchpad bevat
 
 Launchpad is een modulaire SaaS-toepassing gebouwd op één gedeelde codebase.
@@ -16,14 +20,13 @@ laat u kiezen welke optionele modules u wilt behouden en een
 implementatiedoel. De kerncomponenten voor accounts, beveiliging, instellingen
 en de gedeelde database blijven aanwezig.
 
+ Voor de implementatie moeten de app, database en providers afzonderlijk worden geconfigureerd.
+
 Bij een Git-checkout gebruikt de configuratie sparse-checkout, zodat
 uitgesloten bestanden die in Git worden bijgehouden, in de Git-geschiedenis
-blijven. In een aangekochte ZIP worden de bestanden van uitgesloten modules
-verwijderd uit het uitgepakte project; ze kunnen niet worden hersteld uit de
-Git-geschiedenis omdat de ZIP geen repository-metadata bevat. Dit is een
+blijven. Dit is een
 eenmalige configuratie, geen tool voor het wisselen van modules op de
-bestaande locatie. Maak een back-up van de uitgepakte ZIP voordat u deze
-configureert, als u mogelijk later uitgesloten broncode wilt herstellen.
+bestaande locatie.
 
 De wizard schrijft de geselecteerde modules en implementatievoorkeuren naar
 `launchpad.config.json`, en provider-secrets naar het door Git genegeerde `.env`-bestand.
