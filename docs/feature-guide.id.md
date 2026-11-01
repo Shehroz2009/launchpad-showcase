@@ -10,8 +10,6 @@ Launchpad dipelihara secara aktif dan terus menerima pembaruan produk. Kedua pak
 
 Launchpad adalah aplikasi SaaS modular yang dibangun di atas satu basis kode bersama. Modul opsionalnya mencakup penagihan, obrolan AI, organisasi, penerbitan, dukungan, komunitas, notifikasi, pemasaran email, analitik, rujukan, periklanan, SEO, integrasi, dan penyimpanan file privat. Wizard pengaturan memungkinkan Anda memilih modul opsional mana yang akan dipertahankan dan target deployment. Komponen inti akun, keamanan, pengaturan, dan basis data bersama tetap berada di tempatnya.
 
-File Docker Compose yang disertakan menjalankan PostgreSQL dan Mailpit untuk pengembangan lokal, bukan aplikasi Launchpad. Deployment aplikasi memerlukan konfigurasi aplikasi, database, dan penyedia secara terpisah.
-
 Dalam checkout Git, pengaturan menggunakan sparse-checkout sehingga file yang dilacak tetapi dikecualikan tetap ada dalam riwayat Git. Ini adalah pengaturan sekali jalan, bukan alat pengalih modul di tempat.
 
 Wizard menulis modul yang dipilih dan preferensi deployment ke `launchpad.config.json`, dan rahasia penyedia ke file `.env` yang diabaikan oleh Git. Wizard ini dapat memeriksa kredensial penyedia yang dipilih ketika Anda secara eksplisit memilih **Uji koneksi**. Wizard ini tidak membuat akun penyedia, mendeploy infrastruktur, atau mengonfigurasi dasbor eksternal. Anda masih perlu menyelesaikan dan memelihara layanan-layanan tersebut sendiri.

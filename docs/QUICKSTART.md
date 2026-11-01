@@ -12,10 +12,7 @@ provide its runtime, database, provider accounts, and production credentials.
 
 ## First run
 
-Clone the repository before setup. The included Compose configuration provides
-optional local PostgreSQL and Mailpit services; it does not run the Launchpad
-application. After setup, the wizard tells you whether a local service is
-needed and which Compose command to use.
+Clone the repository before setup.
 
 ```bash
 git clone https://github.com/Shehroz2009/Launchpad.git

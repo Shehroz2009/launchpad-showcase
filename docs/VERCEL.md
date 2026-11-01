@@ -6,18 +6,29 @@ Configure the application, database, secrets, and provider accounts separately.
 
 ## Before deployment
 
-1. Clone the Launchpad repository, run `npm run setup` from the clean clone,
-   and select the modules you intend to deploy.
-2. Create a Vercel project connected to the configured Git repository.
-3. Provision PostgreSQL. Configure a pooled runtime connection for
+1. Clone the Launchpad repository and enter the clean clone:
+
+   ```bash
+   git clone https://github.com/Shehroz2009/Launchpad.git
+   cd Launchpad
+   ```
+
+2. Run the setup wizard from the clean clone to select the modules you intend to deploy:
+
+   ```bash
+   npm run setup
+   ```
+
+3. Create a Vercel project connected to the configured Git repository.
+4. Provision PostgreSQL. Configure a pooled runtime connection for
    `DATABASE_URL` when required by your database provider and a direct
    migration connection for `DIRECT_URL`.
-4. Set required application variables in the correct Vercel environments,
+5. Set required application variables in the correct Vercel environments,
    including the database URLs, strong `AUTH_SECRET`, and public application
    URL.
-5. Add provider credentials only for enabled features. Use test credentials
+6. Add provider credentials only for enabled features. Use test credentials
    for Preview where supported and production credentials only in Production.
-6. Set `NEXT_PUBLIC_APP_URL` and Auth.js URL/trusted-host settings to the
+7. Set `NEXT_PUBLIC_APP_URL` and Auth.js URL/trusted-host settings to the
    deployed HTTPS origin.
 
 Use the generated `.env` and `.env.example` as the source of truth for exact

@@ -84,9 +84,9 @@ module selection does not turn them into independent services or databases.
 ## Start locally
 
 Use Node.js 20.9 or newer (Node.js 22 LTS recommended) and PostgreSQL 14 or
-newer. The included Compose file provides optional local PostgreSQL and
-Mailpit services; it does not run the Launchpad application. Clone the
-repository and run setup from the project directory:
+newer.
+
+Clone the repository and run setup from the project directory:
 
 ```bash
 git clone https://github.com/Shehroz2009/Launchpad.git

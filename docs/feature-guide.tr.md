@@ -10,8 +10,6 @@ Launchpad aktif olarak geliştirilir ve düzenli ürün güncellemeleri alır. H
 
 Launchpad, tek bir ortak kod tabanı üzerinde inşa edilmiş modüler bir SaaS uygulamasıdır. İsteğe bağlı modülleri; faturalama, yapay zekâ sohbeti, organizasyonlar, yayınlama, destek, topluluk, bildirimler, e-posta pazarlama, analitik, yönlendirmeler, reklamcılık, SEO, entegrasyonlar ve özel dosya depolamayı kapsar. Kurulum sihirbazı, hangi isteğe bağlı modüllerin korunacağına ve bir dağıtım hedefine karar vermenizi sağlar. Temel hesap, güvenlik, ayarlar ve ortak veritabanı bileşenleri yerinde kalır.
 
-Dahil edilen Docker Compose dosyası yerel geliştirme için PostgreSQL ve Mailpit’i başlatır, Launchpad uygulamasını değil. Uygulamanın dağıtımı için uygulama, veritabanı ve sağlayıcılar ayrıca yapılandırılmalıdır.
-
 Bir Git kontrolünde, kurulum sparse-checkout kullanır; bu sayede hariç tutulan izlenen dosyalar Git geçmişinde kalır. Bu, yerinde modül değiştirme aracı değil, tek seferlik bir kurulumdur.
 
 Sihirbaz, seçilen modülleri ve dağıtım tercihlerini `launchpad.config.json` dosyasına, sağlayıcı gizli anahtarlarını ise Git tarafından yok sayılan `.env` dosyasına yazar. **Bağlantıyı test et** seçeneğini açıkça seçtiğinizde seçilen sağlayıcı kimlik bilgilerini kontrol edebilir. Sağlayıcı hesapları oluşturmaz, altyapı dağıtmaz veya harici panoları yapılandırmaz. Bu hizmetleri yine kendiniz tamamlamanız ve sürdürmeniz gerekir.
