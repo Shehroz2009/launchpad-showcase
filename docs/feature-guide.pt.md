@@ -2,9 +2,9 @@
 
 Este guia é uma visão geral concisa do kit inicial do Launchpad para potenciais compradores. Ele resume o que está incluído, o que requer serviços externos ou configuração e o que o kit não fornece automaticamente. O guia completo de recursos e o código-fonte do projeto adquirido permanecem como as referências autoritativas de implementação.
 
-## Compra, atualizações e suporte
+## Compra e atualizações
 
-O Launchpad é mantido ativamente e recebe atualizações contínuas. Ambos os planos de compra incluem atualizações e suporte direto do desenvolvedor. Você pode escolher uma assinatura de US$ 129 por mês, que inclui acesso, atualizações e suporte enquanto estiver ativa, ou uma compra Lifetime de US$ 299 em pagamento único, que inclui acesso, atualizações e suporte durante toda a vida útil do produto. O Launchpad é um software que você hospeda e opera, não um serviço SaaS hospedado; hospedagem e tarifas de provedores terceirizados são cobradas à parte.
+O Launchpad recebe atualizações regulares. Consulte a página do produto no Gumroad para ver as opções de acesso e as condições de compra atuais. O Launchpad é um software que você hospeda e opera para o seu produto, não um serviço SaaS hospedado; hospedagem e serviços de terceiros são cobrados à parte.
 
 ## O que o Launchpad inclui
 
@@ -44,12 +44,7 @@ e o painel; é opcional e pode ser revisada.
 
 ## Faturamento e acesso pago
 
-O módulo de faturamento suporta o Stripe Checkout para assinaturas configuradas e
-compras únicas de Licença Vitalícia, além do Portal do Cliente Stripe. A verificação opcional de compras da
-Apple App Store e do Google Play pode fornecer outra fonte de faturamento
-quando os produtos necessários, credenciais, contas de loja e integração
-de cliente nativo estiverem configurados. As rotas da loja estão indisponíveis até que suas
-configurações sejam fornecidas; o Stripe pode continuar a operar independentemente.
+O Launchpad oferece assinaturas e compras únicas Lifetime por meio de Stripe, Paddle, Lemon Squeezy ou PayPro Global; cada produto usa um provedor de pagamentos escolhido. Para produtos com aplicativos móveis nativos, também há verificação de compras da Apple App Store e do Google Play.
 
 O kit processa eventos de pagamento e assinatura verificados, registra o histórico de pagamentos
 e lida com reembolsos e disputas. Ele **não** protege automaticamente
@@ -145,11 +140,7 @@ português, russo, turco, vietnamita e chinês. O inglês é o
 catálogo de fallback e o idioma de fallback do assistente de configuração. Revise as traduções
 e o texto legal para o seu público antes do lançamento.
 
-O construtor de produtos edita um conjunto de seções da aplicação em lista de permissões,
-navegação, texto localizado e configurações de marca. Ele não gera
-código arbitrário, não cria rotas de aplicação e não altera a lógica de negócios. Tema,
-movimento e outras preferências de interface pessoal são armazenados no navegador,
-não sincronizados entre dispositivos.
+O construtor do produto permite alterar o conteúdo de páginas compatíveis, a navegação e as configurações da marca. No editor de animações, os usuários podem visualizar e ajustar os efeitos disponíveis.
 
 ## Armazenamento, indicações, publicidade e SEO
 
@@ -159,11 +150,7 @@ e verifica a propriedade do arquivo. Configure um bucket privado e as credenciai
 necessárias. O módulo não varre arquivos em busca de malware e a exclusão da conta
 não remove automaticamente objetos remotos.
 
-O módulo de indicações rastreia links de parceiros e comissões derivadas do Stripe.
-Os pagamentos são realizados fora do Launchpad. Ele não calcula comissões
-para compras da App Store ou do Google Play. A atribuição de indicação usa um
-cookie de 30 dias; o Launchpad não tem um gerenciador de consentimento embutido, portanto avalie e
-implemente os requisitos de consentimento aplicáveis.
+Links de indicação ajudam parceiros a atrair clientes para o seu produto. As recompensas consideram pagamentos Stripe elegíveis e são ajustadas em caso de reembolso ou disputa; os pagamentos aos parceiros são feitos fora do Launchpad.
 
 As ferramentas de publicidade organizam informações de campanha e conta e importam
 relatórios de CSV. Elas não se conectam a redes de anúncios para criar ou gerenciar campanhas ao vivo.
@@ -171,9 +158,7 @@ Os recursos de SEO fornecem metadados localizados, sitemaps, regras de robots,
 dados estruturados e uma auditoria do banco de dados da aplicação; eles não são um
 crawler da web, rastreador de classificação, ferramenta de pesquisa de palavras-chave ou gerenciador de redirecionamentos.
 
-O catálogo de integrações relata se a configuração esperada está presente.
-Ele não prova que as credenciais funcionam, não cria contas de provedores e não
-garante a entrega.
+A área de integrações ajuda a configurar serviços compatíveis e verificar algumas conexões.
 
 ## Implantação e responsabilidades operacionais
 

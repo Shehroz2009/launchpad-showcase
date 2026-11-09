@@ -6,9 +6,9 @@ configuratie vereist, en wat de kit niet automatisch biedt. De volledige
 functie-gids en broncode van het aangekochte project blijven de
 autoritatieve implementatierferenties.
 
-## Aankoop, updates en ondersteuning
+## Aankoop en updates
 
-Launchpad wordt actief onderhouden en ontvangt doorlopend productupdates. Beide aankoopopties omvatten updates en directe ondersteuning van de ontwikkelaar. Je kunt kiezen voor een abonnement van $129 per maand, met toegang, updates en ondersteuning zolang het actief is, of voor een eenmalige Lifetime-aankoop van $299, met toegang, updates en ondersteuning gedurende de levensduur van het product. Launchpad is software die je zelf host en beheert, geen gehoste SaaS-dienst; hosting en kosten van externe providers zijn apart.
+Launchpad ontvangt regelmatig updates. Bekijk de Gumroad-productpagina voor de actuele toegangsopties en aankoopvoorwaarden. Launchpad is software die je zelf host en beheert voor je eigen product, geen gehoste SaaS-dienst; hosting en kosten van externe providers zijn apart.
 
 ## Wat Launchpad bevat
 
@@ -61,13 +61,7 @@ en het dashboard; deze is optioneel en kan opnieuw worden bezocht.
 
 ## Facturatie en betaalde toegang
 
-De facturatiemodule ondersteunt Stripe Checkout voor geconfigureerde
-abonnementen en eenmalige Lifetime-aankopen, plus de Stripe Customer Portal.
-Optionele Apple App Store- en Google Play-aankoopverificatie kan een andere
-facturatiebron bieden wanneer de vereiste producten, credentials,
-winkelaccounts en native client-integratie zijn geconfigureerd. Winkelroutes
-zijn niet beschikbaar totdat hun instellingen zijn verstrekt; Stripe kan
-onafhankelijk blijven functioneren.
+Launchpad ondersteunt abonnementen en eenmalige Lifetime-aankopen via Stripe, Paddle, Lemon Squeezy of PayPro Global; per product kies je één betaalprovider. Voor producten met native mobiele apps is ook verificatie van aankopen via Apple App Store en Google Play beschikbaar.
 
 De kit verwerkt geverifieerde betaal- en abonnementsgebeurtenissen, registreert
 betaalgeschiedenis, en behandelt terugbetalingen en geschillen. Het
@@ -170,11 +164,7 @@ Pools, Portugees, Russisch, Turks, Vietnamees en Chinees. Engels is de
 fallback-catalogus en de fallback-taal van de configuratiewizard. Beoordeel
 vertalingen en juridische tekst voor uw publiek vóór lancering.
 
-De productbuilder bewerkt een toegestane set applicatie-secties, navigatie,
-gelokaliseerde tekst en merkinstellingen. Het genereert geen willekeurige
-code, maakt geen applicatieroutes aan, en wijzigt geen bedrijfslogica.
-Thema, beweging en andere persoonlijke interfacevoorkeuren worden in de
-browser opgeslagen, niet gesynchroniseerd tussen apparaten.
+Met de productbuilder kun je ondersteunde pagina-inhoud, navigatie en merkinstellingen aanpassen. In de bewegingseditor kunnen gebruikers ondersteunde animaties bekijken en aanpassen.
 
 ## Opslag, verwijzingen, adverteren en SEO
 
@@ -185,12 +175,7 @@ privé-bucket en de vereiste credentials. De module scant bestanden niet op
 malware, en accountverwijdering verwijdert niet automatisch externe
 objecten.
 
-De verwijzingsmodule volgt partnerlinks en Stripe-afgeleide commissies.
-Uitbetalingen worden buiten Launchpad uitgevoerd. Het berekent geen
-commissies voor App Store- of Google Play-aankopen. Verwijzingstoeschrijving
-gebruikt een 30-daagse cookie; Launchpad heeft geen ingebouwde
-toestemmingsbeheerder, dus beoordeel en implementeer toepasselijke
-toestemmingsvereisten.
+Met verwijzingslinks kunnen partners klanten naar je product brengen. Beloningen houden rekening met geschikte Stripe-betalingen en worden aangepast bij terugbetalingen of geschillen; uitbetalingen vinden buiten Launchpad plaats.
 
 Advertentietools organiseren campagne- en accountinformatie en importeren
 rapporten van CSV. Ze verbinden zich niet met advertenetwerken om live
@@ -199,9 +184,7 @@ metadata, sitemaps, robotsregels, gestructureerde data en een
 applicatiedatabase-audit; ze zijn geen webcrawler, rankingtracker,
 zoektermenonderzoekstool, of redirectbeheerder.
 
-De integratiecatalogus rapporteert of de verwachte configuratie aanwezig is.
-Het bewijst niet dat credentials werken, maakt geen provider-accounts aan,
-en garandeert geen bezorging.
+Op de integratiepagina kun je ondersteunde diensten instellen en bepaalde verbindingen controleren.
 
 ## Implementatie en operationele verantwoordelijkheden
 

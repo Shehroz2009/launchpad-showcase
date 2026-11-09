@@ -2,9 +2,9 @@
 
 Esta guía es un resumen conciso del kit inicial de Launchpad para compradores potenciales. Resume lo que está incluido, lo que requiere servicios externos o configuración, y lo que el kit no proporciona automáticamente. La guía completa de funciones y el código fuente del proyecto adquirido siguen siendo las referencias autorizadas de implementación.
 
-## Compra, actualizaciones y soporte
+## Compra y actualizaciones
 
-Launchpad se mantiene activamente y recibe actualizaciones continuas. Ambos planes de compra incluyen actualizaciones y soporte directo del desarrollador. Puedes elegir una suscripción de 129 $ al mes, que incluye acceso, actualizaciones y soporte mientras esté activa, o una compra Lifetime de 299 $ en un único pago, que incluye acceso, actualizaciones y soporte durante toda la vida del producto. Launchpad es software que alojas y operas tú, no un servicio SaaS alojado; el alojamiento y las tarifas de proveedores externos se pagan por separado.
+Launchpad recibe actualizaciones periódicas. Consulta la página del producto en Gumroad para ver las opciones de acceso y las condiciones de compra vigentes. Launchpad es un software que alojas y administras para tu propio producto, no un servicio SaaS alojado; el alojamiento y los servicios de terceros se pagan por separado.
 
 ## Qué incluye Launchpad
 
@@ -28,7 +28,7 @@ La lista de verificación de incorporación de la cuenta cubre la configuración
 
 ## Facturación y acceso de pago
 
-El módulo de facturación admite Stripe Checkout para suscripciones configuradas y compras únicas de por vida, además de la Stripe Customer Portal. La verificación opcional de compras de Apple App Store y Google Play puede proporcionar otra fuente de facturación cuando se configuran los productos, credenciales, cuentas de tienda e integración de cliente nativo requeridos. Las rutas de la tienda no están disponibles hasta que se proporcionen sus configuraciones; Stripe puede continuar operando de forma independiente.
+Launchpad admite suscripciones y compras únicas Lifetime con Stripe, Paddle, Lemon Squeezy o PayPro Global; cada producto utiliza un proveedor de pagos seleccionado. También permite verificar compras de Apple App Store y Google Play para productos con aplicaciones móviles nativas.
 
 El kit procesa eventos de pago y suscripción verificados, registra el historial de pagos y maneja reembolsos y disputas. No **protege** automáticamente cada función de su producto solo porque la facturación esté habilitada. `paymentBlocked` es una señal de facturación, no un muro de pago universal. Cada función de pago debe aplicar el acceso en el servidor; ocultar un botón en el navegador no es suficiente. Decida qué funciones son de pago y qué pueden hacer aún los clientes restringidos, luego implemente y pruebe esas reglas. El kit tampoco incluye un flujo de trabajo de administrador listo para usar para verificar pagos realizados fuera de Stripe.
 
@@ -66,17 +66,17 @@ El panel de control incluye vistas de cuenta y facturación. La analítica de pr
 
 La interfaz admite 18 localizaciones: inglés, árabe, bengalí, alemán, español, francés, hindi, indonesio, italiano, japonés, coreano, neerlandés, polaco, portugués, ruso, turco, vietnamita y chino. El inglés es el catálogo de respaldo y el idioma de respaldo del asistente de configuración. Revise las traducciones y el texto legal para su audiencia antes del lanzamiento.
 
-El constructor de producto edita un conjunto de secciones de aplicación en la lista de permitidos, la navegación, el texto localizado y la configuración de marca. No genera código arbitrario, no crea rutas de aplicación ni cambia la lógica de negocio. El tema, el movimiento y otras preferencias de interfaz personal se almacenan en el navegador, no se sincronizan entre dispositivos.
+El creador del producto permite cambiar el contenido compatible de las páginas, la navegación y la marca. El editor de movimiento permite previsualizar y ajustar los efectos de animación disponibles.
 
 ## Almacenamiento, referidos, publicidad y SEO
 
 El almacenamiento privado de archivos opcional utiliza almacenamiento de objetos compatible con S3. La aplicación valida tipos y tamaños de archivos, utiliza URLs de carga/descarga de vida corta y comprueba la propiedad del archivo. Configure un cubo privado y las credenciales requeridas. El módulo no escanea archivos en busca de malware, y la eliminación de la cuenta no elimina automáticamente los objetos remotos.
 
-El módulo de referidos rastrea enlaces de socios y comisiones derivadas de Stripe. Los pagos se realizan fuera de Launchpad. No calcula comisiones para compras de App Store o Google Play. La atribución de referidos utiliza una cookie de 30 días; Launchpad no tiene un gestor de consentimiento integrado, por lo que evalúe e implemente los requisitos de consentimiento aplicables.
+Los enlaces de recomendación ayudan a los socios a atraer clientes a tu producto. Las recompensas tienen en cuenta los pagos válidos de Stripe y se ajustan cuando hay reembolsos o disputas; los pagos a socios se realizan fuera de Launchpad.
 
 Las herramientas de publicidad organizan información de campañas y cuentas e importan informes desde CSV. No se conectan a redes publicitarias para crear o gestionar campañas en vivo. Las funciones de SEO proporcionan metadatos localizados, sitemaps, reglas de robots, datos estructurados y una auditoría de la base de datos de la aplicación; no son un rastreador web, un rastreador de clasificación, una herramienta de investigación de palabras clave ni un gestor de redirecciones.
 
-El catálogo de integraciones informa si la configuración esperada está presente. No demuestra que las credenciales funcionen, no crea cuentas de proveedor ni garantiza la entrega.
+La sección de integraciones ayuda a configurar servicios compatibles y comprobar algunas conexiones.
 
 ## Despliegue y responsabilidades operativas
 

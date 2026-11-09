@@ -2,9 +2,9 @@
 
 Ten przewodnik stanowi zwięzły przegląd zestawu startowego Launchpad dla potencjalnych nabywców. Podsumowuje, co jest w nim zawarte, co wymaga zewnętrznych usług lub konfiguracji, oraz czego zestaw nie zapewnia automatycznie. Pełny przewodnik po funkcjach i kod źródłowy zakupionego projektu pozostają autorytatywnymi referencjami implementacyjnymi.
 
-## Zakup, aktualizacje i wsparcie
+## Zakup i aktualizacje
 
-Launchpad jest aktywnie utrzymywany i regularnie otrzymuje aktualizacje. Oba warianty zakupu obejmują aktualizacje oraz bezpośrednie wsparcie dewelopera. Możesz wybrać subskrypcję za 129 $ miesięcznie, która zapewnia dostęp, aktualizacje i wsparcie, gdy jest aktywna, albo jednorazowy zakup Lifetime za 299 $, który zapewnia dostęp, aktualizacje i wsparcie przez cały okres istnienia produktu. Launchpad to oprogramowanie hostowane i obsługiwane samodzielnie, a nie usługa SaaS hostowana przez dostawcę; koszty hostingu i usług zewnętrznych dostawców są osobne.
+Launchpad jest regularnie aktualizowany. Aktualne opcje dostępu i warunki zakupu znajdziesz na stronie produktu w Gumroad. Launchpad to oprogramowanie, które samodzielnie hostujesz i obsługujesz dla swojego produktu, a nie hostowana usługa SaaS; hosting i usługi zewnętrznych dostawców są płatne osobno.
 
 ## Co zawiera Launchpad
 
@@ -45,13 +45,7 @@ i panel sterowania; jest opcjonalna i można do niej wrócić.
 
 ## Rozliczenia i płatny dostęp
 
-Moduł rozliczeń obsługuje Stripe Checkout dla skonfigurowanych subskrypcji
-i jednorazowych zakupów Lifetime, a także Stripe Customer Portal. Opcjonalna
-weryfikacja zakupów z Apple App Store i Google Play może zapewnić dodatkowe
-źródło rozliczeń, gdy zostaną skonfigurowane wymagane produkty, dane
-uwierzytelniające, konta w sklepach i integracja z natywnym klientem. Trasy
-sklepowe są niedostępne, dopóki nie zostaną podane ich ustawienia; Stripe może
-działać niezależnie.
+Launchpad obsługuje subskrypcje i jednorazowe zakupy Lifetime przez Stripe, Paddle, Lemon Squeezy lub PayPro Global; dla każdego produktu wybiera się jednego dostawcę płatności. Dla produktów z natywnymi aplikacjami mobilnymi dostępna jest również weryfikacja zakupów Apple App Store i Google Play.
 
 Zestaw przetwarza zweryfikowane zdarzenia płatności i subskrypcji, zapisuje
 historię płatności oraz obsługuje zwroty i spory. Nie **chroni** automatycznie
@@ -149,10 +143,7 @@ polski, portugalski, rosyjski, turecki, wietnamski i chiński. Język angielski 
 katalogiem zapasowym i językiem zapasowym kreatora konfiguracji. Przeglądaj tłumaczenia
 i teksty prawne dla swojej grupy docelowej przed uruchomieniem.
 
-Kreator produktu edytuje dozwolony zestaw sekcji aplikacji, nawigację, lokalizowane
-teksty i ustawienia marki. Nie generuje dowolnego kodu, nie tworzy tras aplikacji
-ani nie zmienia logiki biznesowej. Motyw, animacje i inne osobiste preferencje
-interfejsu są przechowywane w przeglądarce, a nie synchronizowane między urządzeniami.
+Kreator produktu pozwala zmieniać obsługiwaną treść stron, nawigację i ustawienia marki. Edytor animacji umożliwia użytkownikom podgląd i dostosowanie obsługiwanych efektów.
 
 ## Magazyn, polecenia, reklama i SEO
 
@@ -162,11 +153,7 @@ wgrania/pobierania i sprawdza własność plików. Skonfiguruj prywatny bucket
 i wymagane dane uwierzytelniające. Moduł nie skanuje plików pod kątem złośliwego
 oprogramowania, a usunięcie konta nie usuwa automatycznie zdalnych obiektów.
 
-Moduł poleceń śledzi linki partnerskie i prowizje pochodzące ze Stripe.
-Wypłaty są wykonywane poza Launchpad. Nie oblicza prowizji dla zakupów z
-App Store lub Google Play. Atrybucja poleceń używa ciasteczka 30-dniowego;
-Launchpad nie ma wbudowanego menedżera zgód, więc oceń i zaimplementuj
-stosowne wymagania zgodowe.
+Linki polecające pomagają partnerom przyciągać klientów do produktu. Nagrody uwzględniają kwalifikujące się płatności Stripe i są korygowane w przypadku zwrotów lub sporów; wypłaty odbywają się poza Launchpad.
 
 Narzędzia reklamowe organizują informacje o kampaniach i kontach oraz importują
 raporty z CSV. Nie łączą się z sieciami reklamowymi, aby tworzyć lub zarządzać
@@ -175,9 +162,7 @@ reguły robots, dane strukturalne i audyt bazy danych aplikacji; nie są one
 pajęczyną sieciową, śledzeniem pozycji, narzędziem do badania słów kluczowych
 ani menedżerem przekierowań.
 
-Katalog integracji raportuje, czy oczekiwana konfiguracja jest obecna.
-Nie dowodzi, że dane uwierzytelniające działają, nie tworzy kont dostawców
-ani nie gwarantuje dostawy.
+W sekcji integracji można skonfigurować obsługiwane usługi i sprawdzić wybrane połączenia.
 
 ## Wdrożenie i odpowiedzialności operacyjne
 

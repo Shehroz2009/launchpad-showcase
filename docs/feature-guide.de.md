@@ -2,9 +2,9 @@
 
 Dieser Leitfaden bietet eine knappe Übersicht des Launchpad-Starterkits für potenzielle Käufer. Er fasst zusammen, was enthalten ist, was externe Dienste oder Konfiguration erfordert und was das Kit nicht automatisch bereitstellt. Der vollständige Funktionsleitfaden und der Quellcode des gekauften Projekts bleiben die maßgeblichen Referenzen für die Implementierung.
 
-## Kauf, Updates und Support
+## Kauf und Updates
 
-Launchpad wird aktiv gepflegt und erhält laufend Produktupdates. Beide Kaufoptionen umfassen Updates und direkten Support durch den Entwickler. Sie können ein Abonnement für 129 $ pro Monat wählen; Zugriff, Updates und Support gelten, solange das Abonnement aktiv ist. Alternativ gibt es den einmaligen Lifetime-Kauf für 299 $, der Zugriff, Updates und Support für die gesamte Lebensdauer des Produkts umfasst. Launchpad ist selbst gehostete Software und kein gehosteter SaaS-Dienst; Hosting und Gebühren externer Anbieter sind separat.
+Launchpad wird regelmäßig aktualisiert. Die aktuellen Zugangsoptionen und Kaufbedingungen findest du auf der Gumroad-Produktseite. Launchpad ist Software, die du für dein eigenes Produkt selbst hostest und betreibst, kein gehosteter SaaS-Dienst; Hosting und Gebühren externer Anbieter sind separat.
 
 ## Was Launchpad enthält
 
@@ -28,7 +28,7 @@ Die Checkliste für die Konto-Onboarding-Phase umfasst Profileinstellungen, Kont
 
 ## Abrechnung und kostenpflichtiger Zugriff
 
-Das Abrechnungsmodul unterstützt Stripe Checkout für konfigurierte Abonnements und einmalige Lifetime-Käufe sowie das Stripe Customer Portal. Die optionale Kaufverifizierung über den Apple App Store und Google Play kann eine weitere Abrechnungsquelle bereitstellen, wenn die erforderlichen Produkte, Zugangsdaten, Store-Konten und die native Client-Integration konfiguriert sind. Die Store-Routen sind nicht verfügbar, bis ihre Einstellungen bereitgestellt werden; Stripe kann unabhängig weiterarbeiten.
+Launchpad unterstützt Abonnements und einmalige Lifetime-Käufe über Stripe, Paddle, Lemon Squeezy oder PayPro Global; pro Produkt wird ein Zahlungsanbieter ausgewählt. Für Produkte mit nativen mobilen Apps ist auch die Prüfung von Käufen im Apple App Store und bei Google Play verfügbar.
 
 Das Kit verarbeitet verifizierte Zahlungs- und Abonnementereignisse, protokolliert die Zahlungshistorie und behandelt Erstattungen und Streitfälle. Es schützt **nicht** automatisch jede Funktion in Ihrem Produkt nur deshalb, weil die Abrechnung aktiviert ist. `paymentBlocked` ist ein Abrechnungssignal, kein universeller Paywall-Mechanismus. Jede kostenpflichtige Funktion muss den Zugriff auf dem Server erzwingen; das Ausblenden einer Schaltfläche im Browser reicht nicht aus. Entscheiden Sie, welche Funktionen kostenpflichtig sind und was eingeschränkte Kunden weiterhin tun können, und implementieren und testen Sie dann diese Regeln. Das Kit enthält auch keinen fertigen Administrator-Workflow zur Verifizierung von Zahlungen, die außerhalb von Stripe getätigt wurden.
 
@@ -66,17 +66,17 @@ Das Dashboard enthält Ansichten für Konten und Abrechnung. Optionale Produktan
 
 Die Oberfläche unterstützt 18 Lokalisierungen: Englisch, Arabisch, Bengalisch, Deutsch, Spanisch, Französisch, Hindi, Indonesisch, Italienisch, Japanisch, Koreanisch, Niederländisch, Polnisch, Portugiesisch, Russisch, Türkisch, Vietnamesisch und Chinesisch. Englisch ist das Fallback-Katalog und die Fallback-Sprache des Einrichtungswizards. Prüfen Sie Übersetzungen und rechtliche Texte für Ihre Zielgruppe vor dem Start.
 
-Der Produkt-Builder bearbeitet einen erlaubten Satz von Anwendungsbereichen, Navigation, lokalisierte Texte und Markeneinstellungen. Er generiert keinen beliebigen Code, erstellt keine Anwendungsrouten und ändert keine Geschäftslogik. Einstellungen für Theme, Bewegung und andere persönliche Oberflächeneinstellungen werden im Browser gespeichert und nicht über Geräte hinweg synchronisiert.
+Mit dem Produkteditor kannst du unterstützte Seiteninhalte, die Navigation und Markeneinstellungen anpassen. Im Motion-Editor können Nutzer unterstützte Animationen ansehen und anpassen.
 
 ## Speicher, Empfehlungen, Werbung und SEO
 
 Der optionale private Dateispeicher verwendet S3-kompatible Objektspeicher. Die Anwendung validiert Dateitypen und -größen, verwendet kurzlebige Upload-/Download-URLs und prüft die Dateieigentümerschaft. Konfigurieren Sie einen privaten Bucket und die erforderlichen Zugangsdaten. Das Modul scannt Dateien nicht auf Malware, und die Kontolöschung entfernt nicht automatisch entfernte Objekte.
 
-Das Empfehlungsmodul verfolgt Partnerlinks und Stripe-abgeleitete Provisionen. Auszahlungen werden außerhalb von Launchpad durchgeführt. Es berechnet keine Provisionen für Käufe im App Store oder Google Play. Die Empfehlungszuordnung verwendet ein 30-Tage-Cookie; Launchpad hat keinen integrierten Consent-Manager, daher müssen Sie anwendbare Zustimmungserfordernisse bewerten und implementieren.
+Empfehlungslinks helfen Partnern, Kunden für dein Produkt zu gewinnen. Prämien berücksichtigen berechtigte Stripe-Zahlungen und werden bei Rückerstattungen oder Streitfällen angepasst; Auszahlungen erfolgen außerhalb von Launchpad.
 
 Werkzeuge für Werbung organisieren Kampagnen- und Kontoinformationen und importieren Berichte aus CSV. Sie verbinden sich nicht mit Werbenetzwerken, um aktive Kampagnen zu erstellen oder zu verwalten. SEO-Funktionen bieten lokalisierte Metadaten, Sitemaps, robots-Regeln, strukturierte Daten und eine Auditierung der Anwendungsdatenbank; sie sind kein Webcrawler, kein Ranking-Tracker, kein Keyword-Forschungstool und kein Redirect-Manager.
 
-Das Integrationskatalog meldet, ob die erwartete Konfiguration vorhanden ist. Es beweist nicht, dass Zugangsdaten funktionieren, erstellt keine Anbieterkonten und garantiert keine Zustellung.
+Im Integrationsbereich kannst du unterstützte Dienste einrichten und ausgewählte Verbindungen prüfen.
 
 ## Bereitstellung und Betriebsverantwortlichkeiten
 

@@ -23,14 +23,9 @@ history. Downloaded ZIP archives and copied source folders are not supported.
 This is a one-time setup, not an in-place module-switching tool; start again
 from a fresh clone to change the selected modules after setup.
 
-## Purchase, updates, and support
+## Purchase and updates
 
-Launchpad is actively maintained and receives ongoing product updates. Both
-purchase plans include updates and direct support from the developer. A
-$129/month subscription includes access, updates, and support while active; a
-one-time $299 Lifetime purchase includes ongoing access, updates, and support
-for the product's lifetime. Launchpad is self-hosted software, not a hosted SaaS
-service; hosting and third-party provider fees are separate.
+Launchpad receives regular updates. See the Gumroad product page for current access options and purchase terms. Launchpad is software you host and operate yourself, not a hosted SaaS service; hosting and third-party provider fees are separate.
 
 The wizard writes selected modules and deployment preferences to
 `launchpad.config.json`, and provider secrets to the Git-ignored `.env` file.
@@ -62,12 +57,7 @@ and the dashboard; it is optional and can be revisited.
 
 ## Billing and paid access
 
-The billing module supports Stripe Checkout for configured subscriptions and
-one-time Lifetime purchases, plus the Stripe Customer Portal. Optional Apple
-App Store and Google Play purchase verification can provide another billing
-source when the required products, credentials, store accounts, and native
-client integration are configured. Store routes are unavailable until their
-settings are provided; Stripe can continue to operate independently.
+Launchpad supports subscriptions and one-time Lifetime purchases through Stripe, Paddle, Lemon Squeezy, or PayPro Global; each product uses one selected payment provider. Optional Apple App Store and Google Play purchase verification is also available for products with native mobile apps.
 
 The kit processes verified payment and subscription events, records payment
 history, and handles refunds and disputes. It does **not** automatically
@@ -163,11 +153,7 @@ Portuguese, Russian, Turkish, Vietnamese, and Chinese. English is the
 fallback catalog and the setup wizard's fallback language. Review translations
 and legal text for your audience before launch.
 
-The product builder edits an allow-listed set of application sections,
-navigation, localized copy, and brand settings. It does not generate
-arbitrary code, create application routes, or change business logic. Theme,
-motion, and other personal interface preferences are stored in the browser,
-not synchronized across devices.
+The product builder lets you update supported page content, navigation, and brand settings. The motion editor lets users preview and adjust supported animation styles and timing.
 
 ## Storage, referrals, advertising, and SEO
 
@@ -177,11 +163,7 @@ URLs, and checks file ownership. Configure a private bucket and the required
 credentials. The module does not scan files for malware, and account deletion
 does not automatically remove remote objects.
 
-The referral module tracks partner links and Stripe-derived commissions.
-Payouts are performed outside Launchpad. It does not calculate commissions
-for App Store or Google Play purchases. Referral attribution uses a
-30-day cookie; Launchpad has no built-in consent manager, so assess and
-implement applicable consent requirements.
+Referral links help partners bring customers to your product. Rewards track eligible Stripe payments and are adjusted after refunds or disputes; payouts are made outside Launchpad.
 
 Advertising tools organize campaign and account information and import
 reports from CSV. They do not connect to ad networks to create or manage live
@@ -189,9 +171,7 @@ campaigns. SEO features provide localized metadata, sitemaps, robots rules,
 structured data, and an application-database audit; they are not a web
 crawler, ranking tracker, keyword research tool, or redirect manager.
 
-The integration catalog reports whether expected configuration is present.
-It does not prove that credentials work, create provider accounts, or
-guarantee delivery.
+The integrations area helps you configure supported services and check selected connections.
 
 ## Deployment and operating responsibilities
 

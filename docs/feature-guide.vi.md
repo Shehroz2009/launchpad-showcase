@@ -2,9 +2,9 @@
 
 Hướng dẫn này là bản tóm tắt ngắn gọn về bộ công cụ khởi động Launchpad dành cho các nhà mua hàng tiềm năng. Nó tóm tắt những gì được bao gồm, những gì yêu cầu dịch vụ bên ngoài hoặc cấu hình, và những gì bộ công cụ không cung cấp một cách tự động. Hướng dẫn tính năng đầy đủ và mã nguồn của dự án đã mua vẫn là các tài liệu tham chiếu triển khai có thẩm quyền.
 
-## Mua hàng, cập nhật và hỗ trợ
+## Mua và cập nhật
 
-Launchpad được duy trì tích cực và liên tục nhận các bản cập nhật sản phẩm. Cả hai gói mua đều bao gồm cập nhật và hỗ trợ trực tiếp từ nhà phát triển. Bạn có thể chọn gói đăng ký 129 USD mỗi tháng, bao gồm quyền truy cập, cập nhật và hỗ trợ khi gói còn hiệu lực, hoặc mua Lifetime một lần với giá 299 USD, bao gồm quyền truy cập, cập nhật và hỗ trợ trong suốt vòng đời sản phẩm. Launchpad là phần mềm do bạn tự lưu trữ và vận hành, không phải dịch vụ SaaS được lưu trữ sẵn; phí lưu trữ và nhà cung cấp bên thứ ba được tính riêng.
+Launchpad được cập nhật thường xuyên. Hãy xem trang sản phẩm trên Gumroad để biết các lựa chọn truy cập và điều khoản mua hiện tại. Launchpad là phần mềm bạn tự lưu trữ và vận hành cho sản phẩm của mình, không phải dịch vụ SaaS được lưu trữ; chi phí lưu trữ và nhà cung cấp bên thứ ba được tính riêng.
 
 ## Những gì Launchpad bao gồm
 
@@ -37,9 +37,7 @@ và bảng điều khiển; nó là tùy chọn và có thể được xem xét 
 
 ## Thanh toán và quyền truy cập trả phí
 
-Mô-đun thanh toán hỗ trợ Stripe Checkout cho các gói đăng ký đã cấu hình và
-mua một lần trọn đời, cùng với Stripe Customer Portal. Xác minh mua hàng tùy chọn từ Apple
-App Store và Google Play có thể cung cấp một nguồn thanh toán khác khi các sản phẩm, thông tin xác thực, tài khoản cửa hàng và tích hợp client bản địa yêu cầu được cấu hình. Các tuyến đường cửa hàng không khả dụng cho đến khi cài đặt của chúng được cung cấp; Stripe có thể tiếp tục hoạt động độc lập.
+Launchpad hỗ trợ đăng ký định kỳ và mua Lifetime một lần qua Stripe, Paddle, Lemon Squeezy hoặc PayPro Global; mỗi sản phẩm chọn một nhà cung cấp thanh toán. Sản phẩm có ứng dụng di động gốc cũng có thể xác minh giao dịch mua từ Apple App Store và Google Play.
 
 Bộ công cụ xử lý các sự kiện thanh toán và đăng ký đã xác minh, ghi lại lịch sử thanh toán, và xử lý hoàn tiền và tranh chấp. Nó **không** tự động
 bảo vệ mọi tính năng trong sản phẩm của bạn chỉ vì thanh toán được bật.
@@ -131,11 +129,7 @@ tiếng Bồ Đào Nha, tiếng Nga, tiếng Thổ Nhĩ Kỳ, tiếng Việt và
 tài mục dự phòng và ngôn ngữ dự phòng của trình hướng dẫn cài đặt. Hãy xem xét các bản dịch
 và văn bản pháp lý cho đối tượng của bạn trước khi ra mắt.
 
-Trình xây dựng sản phẩm chỉnh sửa một bộ các phần ứng dụng theo danh sách cho phép,
-điều hướng, văn bản được địa phương hóa và cài đặt thương hiệu. Nó không tạo ra
-mã tùy ý, tạo các tuyến đường ứng dụng, hoặc thay đổi logic kinh doanh. Chủ đề,
-chuyển động và các sở thích giao diện cá nhân khác được lưu trữ trong trình duyệt,
-không được đồng bộ hóa giữa các thiết bị.
+Trình tạo sản phẩm cho phép thay đổi nội dung trang được hỗ trợ, điều hướng và cài đặt thương hiệu. Trình chỉnh sửa chuyển động cho phép người dùng xem trước và điều chỉnh các hiệu ứng hoạt ảnh được hỗ trợ.
 
 ## Lưu trữ, giới thiệu, quảng cáo và SEO
 
@@ -144,11 +138,7 @@ Lưu trữ tệp riêng tư tùy chọn sử dụng lưu trữ đối tượng t
 thông tin xác thực yêu cầu. Mô-đun không quét tệp để tìm mã độc, và việc xóa tài khoản
 không tự động xóa các đối tượng từ xa.
 
-Mô-đun giới thiệu theo dõi các liên kết đối tác và hoa hồng phái sinh từ Stripe.
-Việc chi trả được thực hiện bên ngoài Launchpad. Nó không tính hoa hồng
-cho các mua hàng từ App Store hoặc Google Play. Thuộc tính giới thiệu sử dụng một
-cookie 30 ngày; Launchpad không có trình quản lý sự đồng ý tích hợp, vì vậy hãy đánh giá và
-triển khai các yêu cầu đồng ý áp dụng.
+Liên kết giới thiệu giúp đối tác thu hút khách hàng cho sản phẩm của bạn. Phần thưởng từ các khoản thanh toán Stripe đủ điều kiện được điều chỉnh khi có hoàn tiền hoặc tranh chấp; việc chi trả diễn ra bên ngoài Launchpad.
 
 Các công cụ quảng cáo tổ chức thông tin chiến dịch và tài khoản và nhập
 báo cáo từ CSV. Chúng không kết nối với các mạng quảng cáo để tạo hoặc quản lý các
@@ -156,9 +146,7 @@ chiến dịch trực tiếp. Các tính năng SEO cung cấp siêu dữ liệu 
 dữ liệu có cấu trúc và một bản kiểm toán cơ sở dữ liệu ứng dụng; chúng không phải là một
 trình thu thập web, trình theo dõi xếp hạng, công cụ nghiên cứu từ khóa, hoặc trình quản lý chuyển hướng.
 
-Danh mục tích hợp báo cáo xem cấu hình mong đợi có hiện diện hay không.
-Nó không chứng minh rằng thông tin xác thực hoạt động, tạo tài khoản nhà cung cấp, hoặc
-đảm bảo việc giao hàng.
+Mục tích hợp giúp bạn thiết lập các dịch vụ được hỗ trợ và kiểm tra một số kết nối.
 
 ## Triển khai và trách nhiệm vận hành
 

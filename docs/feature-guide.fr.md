@@ -2,9 +2,9 @@
 
 Ce guide est un résumé concis du kit de démarrage Launchpad destiné aux acheteurs potentiels. Il résume ce qui est inclus, ce qui nécessite des services externes ou une configuration, et ce que le kit ne fournit pas automatiquement. Le guide complet des fonctionnalités et le code source du projet acheté restent les références d'implémentation faisant autorité.
 
-## Achat, mises à jour et assistance
+## Achat et mises à jour
 
-Launchpad est activement maintenu et bénéficie de mises à jour régulières. Les deux formules d'achat incluent les mises à jour et une assistance directe du développeur. Vous pouvez choisir un abonnement à 129 $ par mois, qui comprend l'accès, les mises à jour et l'assistance tant qu'il reste actif, ou un achat Lifetime en un seul paiement de 299 $, qui comprend l'accès, les mises à jour et l'assistance pendant toute la durée de vie du produit. Launchpad est un logiciel que vous hébergez et exploitez vous-même, et non un service SaaS hébergé ; l'hébergement et les frais des fournisseurs tiers sont facturés séparément.
+Launchpad reçoit régulièrement des mises à jour. Consultez la page Gumroad du produit pour connaître les options d’accès et les conditions d’achat actuelles. Launchpad est un logiciel que vous hébergez et exploitez pour votre produit, et non un service SaaS hébergé ; l’hébergement et les services tiers sont facturés séparément.
 
 ## Ce que Launchpad inclut
 
@@ -28,7 +28,7 @@ La liste de contrôle d'intégration du compte couvre les paramètres de profil,
 
 ## Facturation et accès payant
 
-Le module de facturation prend en charge Stripe Checkout pour les abonnements configurés et les achats Lifetime à paiement unique, ainsi que le portail client Stripe. La vérification optionnelle des achats Apple App Store et Google Play peut fournir une autre source de facturation lorsque les produits requis, les identifiants, les comptes de boutique et l'intégration client native sont configurés. Les routes de boutique sont indisponibles jusqu'à ce que leurs paramètres soient fournis ; Stripe peut continuer à fonctionner indépendamment.
+Launchpad prend en charge les abonnements et les achats Lifetime ponctuels avec Stripe, Paddle, Lemon Squeezy ou PayPro Global ; chaque produit utilise un seul prestataire de paiement choisi. La vérification des achats Apple App Store et Google Play est également disponible pour les produits dotés d’applications mobiles natives.
 
 Le kit traite les événements de paiement et d'abonnement vérifiés, enregistre l'historique des paiements et gère les remboursements et les litiges. Il ne protège **pas** automatiquement chaque fonctionnalité de votre produit simplement parce que la facturation est activée. `paymentBlocked` est un signal de facturation, et non un paywall universel. Chaque fonctionnalité payante doit appliquer l'accès côté serveur ; masquer un bouton dans le navigateur n'est pas suffisant. Décidez quelles fonctionnalités sont payantes et ce que les clients restreints peuvent encore faire, puis implémentez et testez ces règles. Le kit n'inclut pas non plus un flux de travail d'administrateur prêt à l'emploi pour vérifier les paiements effectués en dehors de Stripe.
 
@@ -66,17 +66,17 @@ Le tableau de bord inclut des vues de compte et de facturation. L'analyse produi
 
 L'interface prend en charge 18 locales : anglais, arabe, bengali, allemand, espagnol, français, hindi, indonésien, italien, japonais, coréen, néerlandais, polonais, portugais, russe, turc, vietnamien et chinois. L'anglais est le catalogue de secours et la langue de secours de l'assistant de configuration. Examinez les traductions et les textes juridiques pour votre audience avant le lancement.
 
-Le constructeur de produit modifie un ensemble de sections d'application autorisées par liste blanche, la navigation, les textes localisés et les paramètres de marque. Il ne génère pas de code arbitraire, ne crée pas de routes d'application et ne modifie pas la logique métier. Le thème, le mouvement et d'autres préférences d'interface personnelles sont stockés dans le navigateur, et non synchronisés entre les appareils.
+Le créateur de produit permet de modifier le contenu des pages prises en charge, la navigation et la marque. L’éditeur d’animations permet de prévisualiser et d’ajuster les effets disponibles.
 
 ## Stockage, parrainages, publicité et SEO
 
 Le stockage privé de fichiers optionnel utilise un stockage d'objets compatible S3. L'application valide les types et tailles de fichiers, utilise des URL de téléversement/téléchargement à durée limitée et vérifie la propriété des fichiers. Configurez un bucket privé et les identifiants requis. Le module ne scanne pas les fichiers pour détecter les logiciels malveillants, et la suppression du compte ne supprime pas automatiquement les objets distants.
 
-Le module de parrainage suit les liens de partenaires et les commissions dérivées de Stripe. Les paiements sont effectués en dehors de Launchpad. Il ne calcule pas les commissions pour les achats App Store ou Google Play. L'attribution du parrainage utilise un cookie de 30 jours ; Launchpad n'a pas de gestionnaire de consentement intégré, donc évaluez et implémentez les exigences de consentement applicables.
+Les liens de parrainage aident les partenaires à attirer des clients vers votre produit. Les récompenses tiennent compte des paiements Stripe admissibles et sont ajustées en cas de remboursement ou de litige ; les versements sont effectués en dehors de Launchpad.
 
 Les outils de publicité organisent les informations de campagne et de compte et importent des rapports depuis CSV. Ils ne se connectent pas aux réseaux publicitaires pour créer ou gérer des campagnes en direct. Les fonctionnalités SEO fournissent des métadonnées localisées, des plans de site, des règles robots, des données structurées et un audit de la base de données de l'application ; ils ne sont pas un robot d'exploration, un suivi de classement, un outil de recherche de mots-clés ou un gestionnaire de redirections.
 
-Le catalogue d'intégrations signale si la configuration attendue est présente. Il ne prouve pas que les identifiants fonctionnent, ne crée pas de comptes fournisseurs et ne garantit pas la livraison.
+La section des intégrations vous aide à configurer les services pris en charge et à vérifier certaines connexions.
 
 ## Déploiement et responsabilités opérationnelles
 

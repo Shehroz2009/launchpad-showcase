@@ -2,9 +2,9 @@
 
 Panduan ini adalah ringkasan singkat tentang kit awal Launchpad untuk calon pembeli. Panduan ini merangkum apa yang disertakan, apa yang memerlukan layanan eksternal atau konfigurasi, dan apa yang tidak disediakan secara otomatis oleh kit tersebut. Panduan fitur lengkap dan kode sumber proyek yang dibeli tetap menjadi referensi implementasi yang otoritatif.
 
-## Pembelian, pembaruan, dan dukungan
+## Pembelian dan pembaruan
 
-Launchpad dipelihara secara aktif dan terus menerima pembaruan produk. Kedua paket pembelian mencakup pembaruan dan dukungan langsung dari pengembang. Pilih langganan $129 per bulan, yang mencakup akses, pembaruan, dan dukungan selama langganan aktif, atau pembelian Lifetime sekali bayar sebesar $299, yang mencakup akses, pembaruan, dan dukungan selama masa hidup produk. Launchpad adalah perangkat lunak yang Anda hosting dan operasikan sendiri, bukan layanan SaaS yang di-host; biaya hosting dan penyedia pihak ketiga dibayar terpisah.
+Launchpad menerima pembaruan secara berkala. Lihat halaman produk di Gumroad untuk mengetahui pilihan akses dan ketentuan pembelian terbaru. Launchpad adalah perangkat lunak yang Anda host dan operasikan sendiri untuk produk Anda, bukan layanan SaaS yang di-host; biaya hosting dan penyedia pihak ketiga dibayar terpisah.
 
 ## Apa yang disertakan dalam Launchpad
 
@@ -26,7 +26,7 @@ Daftar periksa onboarding akun mencakup pengaturan profil, keamanan akun, dan da
 
 ## Penagihan dan akses berbayar
 
-Modul penagihan mendukung Stripe Checkout untuk langganan yang dikonfigurasi dan pembelian Lifetime sekali, plus Stripe Customer Portal. Verifikasi pembelian Apple App Store dan Google Play opsional dapat menyediakan sumber penagihan lain ketika produk yang diperlukan, kredensial, akun toko, dan integrasi klien native dikonfigurasi. Rute toko tidak tersedia hingga pengaturannya disediakan; Stripe dapat terus beroperasi secara independen.
+Launchpad mendukung langganan dan pembelian Lifetime satu kali melalui Stripe, Paddle, Lemon Squeezy, atau PayPro Global; setiap produk menggunakan satu penyedia pembayaran yang dipilih. Verifikasi pembelian Apple App Store dan Google Play juga tersedia untuk produk dengan aplikasi seluler native.
 
 Kit ini memproses event pembayaran dan langganan yang terverifikasi, mencatat riwayat pembayaran, dan menangani pengembalian dana dan sengketa. Kit ini **tidak** secara otomatis melindungi setiap fitur dalam produk Anda hanya karena penagihan diaktifkan. `paymentBlocked` adalah sinyal penagihan, bukan paywall universal. Setiap fitur berbayar harus menegakkan akses di sisi server; menyembunyikan tombol di browser tidak cukup. Tentukan fitur mana yang berbayar dan apa yang masih dapat dilakukan oleh pelanggan yang dibatasi, lalu implementasikan dan uji aturan-aturan tersebut. Kit ini juga tidak menyertakan alur kerja administrator yang siap pakai untuk memverifikasi pembayaran yang dilakukan di luar Stripe.
 
@@ -64,17 +64,17 @@ Dasbor mencakup tampilan akun dan penagihan. Analitik produk opsional mengumpulk
 
 Antarmuka mendukung 18 lokalisasi: Inggris, Arab, Bengali, Jerman, Spanyol, Prancis, Hindi, Indonesia, Italia, Jepang, Korea, Belanda, Polandia, Portugis, Rusia, Turki, Vietnam, dan Mandarin. Inggris adalah katalog fallback dan bahasa fallback wizard pengaturan. Tinjau terjemahan dan teks hukum untuk audiens Anda sebelum peluncuran.
 
-Pembangun produk mengedit seperangkat bagian aplikasi yang diizinkan, navigasi, salinan terlokalisasi, dan pengaturan merek. Ini tidak menghasilkan kode sewenang-wenang, membuat rute aplikasi, atau mengubah logika bisnis. Preferensi antarmuka pribadi seperti tema, gerakan, dan lainnya disimpan di browser, tidak disinkronkan antar perangkat.
+Product builder memungkinkan Anda mengubah konten halaman yang didukung, navigasi, dan pengaturan merek. Motion editor memungkinkan pengguna melihat pratinjau dan menyesuaikan animasi yang didukung.
 
 ## Penyimpanan, rujukan, periklanan, dan SEO
 
 Penyimpanan file privat opsional menggunakan penyimpanan objek kompatibel S3. Aplikasi memvalidasi jenis dan ukuran file, menggunakan URL unggah/unduh berumur pendek, dan memeriksa kepemilikan file. Konfigurasikan bucket privat dan kredensial yang diperlukan. Modul ini tidak memindai file untuk malware, dan penghapusan akun tidak secara otomatis menghapus objek jarak jauh.
 
-Modul rujukan melacak tautan mitra dan komisi yang diturunkan dari Stripe. Pembayaran dilakukan di luar Launchpad. Modul ini tidak menghitung komisi untuk pembelian App Store atau Google Play. Atribusi rujukan menggunakan cookie 30 hari; Launchpad tidak memiliki manajer persetujuan bawaan, sehingga evaluasi dan implementasikan persyaratan persetujuan yang berlaku.
+Tautan referral membantu mitra mendatangkan pelanggan ke produk Anda. Reward mencakup pembayaran Stripe yang memenuhi syarat dan disesuaikan jika terjadi refund atau sengketa; pembayaran reward dilakukan di luar Launchpad.
 
 Alat periklanan mengorganisasi informasi kampanye dan akun dan mengimpor laporan dari CSV. Alat ini tidak terhubung ke jaringan iklan untuk membuat atau mengelola kampanye langsung. Fitur SEO menyediakan metadata terlokalisasi, sitemap, aturan robots, data terstruktur, dan audit basis data aplikasi; ini bukan perayap web, pelacak peringkat, alat riset kata kunci, atau manajer pengalihan.
 
-Katalog integrasi melaporkan apakah konfigurasi yang diharapkan ada. Katalog ini tidak membuktikan bahwa kredensial berfungsi, membuat akun penyedia, atau menjamin pengiriman.
+Bagian integrasi membantu Anda menyiapkan layanan yang didukung dan memeriksa koneksi tertentu.
 
 ## Deployment dan tanggung jawab operasional
 

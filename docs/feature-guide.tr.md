@@ -2,9 +2,9 @@
 
 Bu kılavuz, potansiyel alıcılar için Launchpad başlangıç kitinin kısa bir genel bakışıdır. Kiti nelerin içerdiğini, nelerin harici hizmetler veya yapılandırma gerektirdiğini ve kitin otomatik olarak sağlamadığı şeyleri özetler. Satın alınan projenin tam özellik kılavuzu ve kaynak kodu, yetkili uygulama referansları olarak kalır.
 
-## Satın alma, güncellemeler ve destek
+## Satın alma ve güncellemeler
 
-Launchpad aktif olarak geliştirilir ve düzenli ürün güncellemeleri alır. Her iki satın alma planı da güncellemeleri ve geliştiriciden doğrudan desteği içerir. Aylık 129 $ tutarındaki abonelik, etkin olduğu sürece erişim, güncellemeler ve destek sağlar. Tek seferlik 299 $ tutarındaki Lifetime satın alımı ise ürünün ömrü boyunca erişim, güncellemeler ve destek sağlar. Launchpad, sizin barındırıp işlettiğiniz bir yazılımdır; barındırılan bir SaaS hizmeti değildir. Barındırma ve üçüncü taraf sağlayıcı ücretleri ayrıca ödenir.
+Launchpad düzenli olarak güncellenir. Güncel erişim seçenekleri ve satın alma koşulları için Gumroad ürün sayfasına bakın. Launchpad, kendi ürününüz için sizin barındırıp işlettiğiniz bir yazılımdır; barındırılan bir SaaS hizmeti değildir. Barındırma ve üçüncü taraf sağlayıcı ücretleri ayrıdır.
 
 ## Launchpad'in içerdiği özellikler
 
@@ -26,7 +26,7 @@ Hesap onboarding kontrol listesi, profil ayarlarını, hesap güvenliğini ve g�
 
 ## Faturalama ve ücretli erişim
 
-Faturalama modülü, yapılandırılmış abonelikler ve tek seferlik Ömür Boyu (Lifetime) satın alımları için Stripe Checkout'u, ayrıca Stripe Müşteri Portalı'nı destekler. İsteğe bağlı Apple App Store ve Google Play satın alma doğrulaması, gerekli ürünler, kimlik bilgileri, mağaza hesapları ve yerel istemci entegrasyonu yapılandırıldığında başka bir faturalama kaynağı sağlayabilir. Mağaza yolları, ayarları sağlanana kadar kullanılamaz; Stripe bağımsız olarak çalışmaya devam edebilir.
+Launchpad, Stripe, Paddle, Lemon Squeezy veya PayPro Global üzerinden abonelikleri ve tek seferlik Lifetime satın alımlarını destekler; her ürün için tek bir ödeme sağlayıcısı seçilir. Yerel mobil uygulaması olan ürünlerde Apple App Store ve Google Play satın alımları da doğrulanabilir.
 
 Kit, doğrulanmış ödeme ve abonelik olaylarını işler, ödeme geçmişini kaydeder ve iadeleri ile uyuşmazlıkları yönetir. Faturalama etkinleştirildi diye ürününüzdeki her özelliği **otomatik olarak korumaz**. `paymentBlocked` bir faturalama sinyalidir, evrensel bir ücret duvarı (paywall) değildir. Her ücretli özellik, erişimi sunucu tarafında uygulamalıdır; tarayıcıda bir düğmeyi gizlemek yeterli değildir. Hangi özelliklerin ücretli olduğunu ve kısıtlı müşterilerin hâlâ neler yapabileceğini belirleyin, ardından bu kuralları uygulayın ve test edin. Kit ayrıca, Stripe dışında yapılan ödemeleri doğrulamak için hazır bir yönetici iş akışı da içermez.
 
@@ -64,17 +64,17 @@ Gösterge paneli, hesap ve faturalama görünümlerini içerir. İsteğe bağlı
 
 Arayüz, 18 yereli destekler: İngilizce, Arapça, Bengalce, Almanca, İspanyolca, Fransızca, Hintçe, Endonezce, İtalyanca, Japonca, Korece, Felemenkçe, Lehçe, Portekizce, Rusça, Türkçe, Vietnamca ve Çince. İngilizce, yedek katalog ve kurulum sihirbazının yedek dilidir. Yayına çıkmadan önce çevirileri ve hukuki metinleri hedef kitleniz için gözden geçirin.
 
-Ürün oluşturucu, uygulama bölümlerinin, gezinmenin, yerelleştirilmiş metinlerin ve marka ayarlarının izin verilen bir setini düzenler. Keyfi kod üretmez, uygulama yolları oluşturmaz veya iş mantığını değiştirmez. Tema, hareket ve diğer kişisel arayüz tercihleri tarayıcıda saklanır, cihazlar arasında senkronize edilmez.
+Ürün oluşturucu, desteklenen sayfa içeriğini, gezinmeyi ve marka ayarlarını düzenlemenizi sağlar. Hareket düzenleyiciyle desteklenen animasyonları önizleyip ayarlayabilirsiniz.
 
 ## Depolama, yönlendirmeler, reklamcılık ve SEO
 
 İsteğe bağlı özel dosya depolaması, S3 uyumlu nesne depolamasını kullanır. Uygulama, dosya türlerini ve boyutlarını doğrular, kısa ömürlü yükleme/indirme URL'leri kullanır ve dosya sahipliğini kontrol eder. Özel bir varlık kovası (bucket) ve gerekli kimlik bilgilerini yapılandırın. Modül, dosyaları kötü amaçlı yazılım taramaz ve hesap silme, uzak nesneleri otomatik olarak silmez.
 
-Yönlendirme modülü, ortak bağlantılarını ve Stripe kaynaklı komisyonları izler. Ödemeler Launchpad dışında gerçekleştirilir. App Store veya Google Play satın alımları için komisyon hesaplamaz. Yönlendirme atfı, 30 günlük bir çerez kullanır; Launchpad yerleşik bir rıza yöneticisi içermediğinden, geçerli rıza gereksinimlerini değerlendirin ve uygulayın.
+Yönlendirme bağlantıları, iş ortaklarının ürününüze müşteri kazandırmasına yardımcı olur. Uygun Stripe ödemelerine ait ödüller, iade veya itiraz durumunda güncellenir; ödemeler Launchpad dışında yapılır.
 
 Reklamcılık araçları, kampanya ve hesap bilgilerini düzenler ve raporları CSV'den içe aktarır. Canlı kampanyaları oluşturmak veya yönetmek için reklam ağlarına bağlanmaz. SEO özellikleri, yerelleştirilmiş meta verileri, site haritalarını, robots kurallarını, yapılandırılmış verileri ve uygulama veritabanı denetimini sağlar; bunlar, bir web tarayıcısı (crawler), sıralama izleyicisi, anahtar kelime araştırma aracı veya yönlendirme yöneticisi değildir.
 
-Entegrasyon kataloğu, beklenen yapılandırmanın var olup olmadığını raporlar. Kimlik bilgilerinin çalıştığını kanıtlamaz, sağlayıcı hesapları oluşturmaz veya teslimatı garanti etmez.
+Entegrasyonlar bölümünde desteklenen hizmetleri yapılandırabilir ve seçili bağlantıları kontrol edebilirsiniz.
 
 ## Dağıtım ve işletme sorumlulukları
 
