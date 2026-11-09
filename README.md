@@ -33,7 +33,8 @@ landing and pricing pages for [all 18 locales](./docs/FEATURES.md#localization).
   protected routes, TOTP multi-factor authentication, and recovery codes.
 - **Billing:** choose Stripe, Paddle, Lemon Squeezy, or PayPro Global for
   subscriptions and one-time Lifetime purchases, plus optional Apple App Store
-  / Google Play purchase verification.
+  / Google Play purchase verification. Billing events can also drive optional
+  GitHub repository invitations and access removal.
 - **Administration:** role-protected controls for users, security, analytics,
   integrations, content, support, and enabled modules.
 - **Product workspace:** account settings, notifications, support, billing
@@ -72,15 +73,15 @@ module selection does not turn them into independent services or databases.
 
 ## Technology
 
-| Area           | Technology                                                    |
-| -------------- | ------------------------------------------------------------- |
-| Application    | Next.js 16, React 19, TypeScript                              |
-| Styling        | Tailwind CSS 4, reusable shadcn/ui-compatible components      |
-| Authentication | Auth.js, email links, optional Google/GitHub OAuth            |
-| Data           | PostgreSQL, Prisma                                            |
+| Area           | Technology                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------ |
+| Application    | Next.js 16, React 19, TypeScript                                                                       |
+| Styling        | Tailwind CSS 4, reusable shadcn/ui-compatible components                                               |
+| Authentication | Auth.js, email links, optional Google/GitHub OAuth                                                     |
+| Data           | PostgreSQL, Prisma                                                                                     |
 | Payments       | Stripe, Paddle, Lemon Squeezy, or PayPro Global; optional Apple App Store and Google Play verification |
-| Quality        | ESLint, Prettier, TypeScript checks, automated tests          |
-| Deployment     | GitHub Actions checks; Vercel integration and host guides     |
+| Quality        | ESLint, Prettier, TypeScript checks, automated tests                                                   |
+| Deployment     | GitHub Actions checks; Vercel integration and host guides                                              |
 
 ## Start locally
 

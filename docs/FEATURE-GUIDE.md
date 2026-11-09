@@ -15,7 +15,7 @@ SEO, integrations, and private file storage. The setup wizard lets you choose
 which optional modules to retain and a deployment target. Core account,
 security, settings, and shared database components remain in place.
 
- Deploying the application requires separately configuring the app, database, and providers.
+Deploying the application requires separately configuring the app, database, and providers.
 
 Setup requires a clean Git clone and uses sparse-checkout so excluded tracked
 files disappear from the working tree but remain in the repository and Git
@@ -58,6 +58,15 @@ and the dashboard; it is optional and can be revisited.
 ## Billing and paid access
 
 Launchpad supports subscriptions and one-time Lifetime purchases through Stripe, Paddle, Lemon Squeezy, or PayPro Global; each product uses one selected payment provider. Optional Apple App Store and Google Play purchase verification is also available for products with native mobile apps.
+
+Optional GitHub billing automation can invite customers to private repositories
+or remove automation-managed access based on verified subscription and
+Lifetime-payment events from the selected provider. Product owners configure
+GitHub App repository rules; customers connect GitHub only when their plan
+requires an invitation. Cancellation preserves access through the paid period,
+and Lifetime access is revoked only after a refund or dispute when no valid
+Lifetime purchase remains. This automates repository membership, not paywalls
+for every paid feature.
 
 The kit processes verified payment and subscription events, records payment
 history, and handles refunds and disputes. It does **not** automatically
