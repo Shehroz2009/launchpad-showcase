@@ -30,6 +30,13 @@ Configure the application, database, secrets, and provider accounts separately.
    for Preview where supported and production credentials only in Production.
 7. Set `NEXT_PUBLIC_APP_URL` and Auth.js URL/trusted-host settings to the
    deployed HTTPS origin.
+8. Set a random `CRON_SECRET` in Vercel and the application. The selected
+   module schedules are included in `vercel.json`; Vercel sends this value as
+   a Bearer authorization header to the cron routes. Billing and marketing
+   run every five minutes, notifications every minute, and analytics retention
+   and storage cleanup daily. Vercel Hobby permits daily schedules only, so
+   billing, marketing, or notifications require Pro or an alternative
+   scheduler/host. See [Vercel schedule limits and pricing](https://vercel.com/docs/schedules/cron-jobs/usage-and-pricing).
 
 Use the generated `.env` and `.env.example` as the source of truth for exact
 variable names. Do not place server secrets in `NEXT_PUBLIC_*` variables.
@@ -40,6 +47,10 @@ The production build applies committed Prisma migrations through the project's
 Vercel build flow. Ensure `DIRECT_URL` can reach the production database during
 the build and that the deployment role has the required migration privileges.
 Back up important production data and review pending migrations before rollout.
+Neon's current [pricing](https://neon.com/pricing) is usage-based on paid plans;
+the Free plan has explicit project, compute, storage, and transfer limits.
+Check the current provider pricing and projected usage before authorizing
+resource creation.
 
 ## Provider configuration
 
