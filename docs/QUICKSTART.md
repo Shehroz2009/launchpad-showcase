@@ -39,7 +39,7 @@ The wizard does not create provider accounts, complete interactive OAuth
 authorization, or provision cloud resources. Provider checks validate a
 specific operation only, not every permission or production setting.
 
-## Run the application
+## Local development
 
 After the wizard completes, follow its configuration output, then run:
 
@@ -48,9 +48,32 @@ npm run dev
 ```
 
 The application uses the configured PostgreSQL database and applies the
-project's normal Prisma workflow. For production, use the deployment platform's
-secret manager for credentials and apply committed database migrations before
-serving traffic.
+project's normal Prisma workflow. This starts a local development server; it does not publish the application.
+
+## Production container deployment
+
+The repository root contains a multi-stage `Dockerfile`. Build the application
+image with the public URL that will be used in production, and build the
+separate migration image:
+
+```bash
+docker build --build-arg NEXT_PUBLIC_APP_URL=https://app.example.com -t launchpad:app .
+docker build --target migration -t launchpad:migrations .
+```
+
+Push both images to your provider's registry. Configure production values in
+the provider's secret manager, including `DATABASE_URL`, `DIRECT_URL`,
+`AUTH_SECRET`, `AUTH_URL`, and `NEXT_PUBLIC_APP_URL`; run the migration image
+once before routing traffic to the application image on port `3000`. Do not
+pass server secrets to `docker build` or bake them into the image.
+`NEXT_PUBLIC_*` values are fixed at build time, so provide any required public
+values before building. After migrations are applied, `GET /api/health` returns
+HTTP 200 when PostgreSQL is reachable and HTTP 503 when it is not.
+
+This is a manual container workflow, not an automated provisioning wizard.
+You still create the provider resources, configure the domain/TLS and any
+scheduled jobs, and arrange image builds, registry pushes, and releases.
+Vercel deployments use the separate [Vercel checklist](./VERCEL.md).
 
 ## Integrations
 

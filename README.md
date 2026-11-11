@@ -104,6 +104,10 @@ npm run setup
 The setup wizard configures the selected modules and deployment target, gathers
 settings, and offers provider checks where supported. Read the
 [quickstart guide](./docs/QUICKSTART.md) before configuring a real deployment.
+`npm run dev` is for local development only. The project includes a root
+`Dockerfile` for a manually managed application container and a one-off
+migration target; after migrations, `GET /api/health` checks PostgreSQL
+readiness. The wizard does not provision provider resources or publish a URL.
 
 ## Documentation
 
