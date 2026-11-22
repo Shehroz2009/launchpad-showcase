@@ -41,13 +41,15 @@ landing and pricing pages for [all 18 locales](./docs/FEATURES.md#localization).
   history, and optional organization and collaboration features.
 - **Product capabilities:** optional modules for email campaigns, AI, publishing,
   marketing, storage, community, referrals, and more.
-- **Operations:** guided setup and updates for existing projects, with
-  connection checks for supported providers.
+- **Operations:** first-run setup, project updates, and guided deployment to
+  six targets: Vercel + Neon, Docker / Cloud VM, Fly.io, Google Cloud Run,
+  AWS ECS Fargate, and Kubernetes.
 
-Provider-backed capabilities require your own provider accounts, credentials,
-and configuration. The setup wizard can test selected credentials, but it does
-not create accounts, complete OAuth consent, provision cloud infrastructure, or
-verify every production permission.
+Provider-backed capabilities require your own provider accounts and
+credentials. The setup wizard tests selected credentials, and deployment
+workflows can provision supported resources in connected accounts. They do not
+create provider accounts or remove the need to prepare target-specific
+prerequisites, grant consent, review costs, and verify production permissions.
 
 See the [feature matrix](./docs/FEATURES.md) and the detailed
 [implementation and operations guide](./docs/FEATURE-GUIDE.md) for current
@@ -81,33 +83,33 @@ module selection does not turn them into independent services or databases.
 | Data           | PostgreSQL, Prisma                                                                                     |
 | Payments       | Stripe, Paddle, Lemon Squeezy, or PayPro Global; optional Apple App Store and Google Play verification |
 | Quality        | ESLint, Prettier, TypeScript checks, automated tests                                                   |
-| Deployment     | GitHub Actions checks; Vercel integration and host guides                                              |
+| Deployment     | GitHub Actions checks; guided deployment to six supported targets                                      |
 
 ## Start locally
 
-Use Node.js 20.9 or newer (Node.js 22 LTS recommended) and PostgreSQL 14 or
-newer.
+Use Git, npm, Node.js 20.19+ (or 22.13+/24+), and Docker Desktop with its
+daemon running. The first-run wizard uses Docker for the local database and
+email inbox.
 
-Clone the repository and run setup from the project directory:
+Clone the repository and start Launchpad from the project directory:
 
 ```bash
 git clone https://github.com/Shehroz2009/Launchpad.git
 cd Launchpad
+npm run dev
 ```
 
-Then run the setup wizard:
+On first start, your browser opens the setup wizard. Choose the features and
+services you want; the wizard installs their dependencies, starts the bundled
+PostgreSQL and Mailpit containers, applies initial migrations, bootstraps the
+administrator account, and launches the app. No separate `npm install`, `.env`
+editing, or migration command is needed.
 
-```bash
-npm run setup
-```
-
-The setup wizard configures the selected modules and deployment target, gathers
-settings, and offers provider checks where supported. Read the
-[quickstart guide](./docs/QUICKSTART.md) before configuring a real deployment.
-`npm run dev` is for local development only. The project includes a root
-`Dockerfile` for a manually managed application container and a one-off
-migration target; after migrations, `GET /api/health` checks PostgreSQL
-readiness. The wizard does not provision provider resources or publish a URL.
+Once the app is running, use **Admin → Integrations** and **Admin → Deployment**
+to configure providers and start a deployment. These workflows require your
+own provider accounts and credentials; the resources created depend on the
+selected target and deployment plan. See the [quickstart guide](./docs/QUICKSTART.md)
+and [deployment guide](./docs/VERCEL.md) for prerequisites and limitations.
 
 ## Documentation
 

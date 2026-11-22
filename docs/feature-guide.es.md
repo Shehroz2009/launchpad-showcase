@@ -14,7 +14,7 @@ Launchpad es una aplicación SaaS modular construida sobre una base de código c
 
 Esta es una configuración de una sola vez, no una herramienta de conmutación de módulos en el lugar.
 
-El asistente escribe los módulos seleccionados y las preferencias de despliegue en `launchpad.config.json`, y los secretos de los proveedores en el archivo `.env` ignorado por Git. Puede verificar las credenciales de los proveedores seleccionados cuando elige explícitamente **Probar conexión**. No crea cuentas de proveedor, no despliega infraestructura ni configura paneles de control externos. Aún debe completar y mantener esos servicios usted mismo.
+El asistente guarda los módulos seleccionados y las preferencias de despliegue en `launchpad.config.json`. La configuración de la aplicación puede guardarse en el archivo `.env` local, ignorado por Git. Si elige explícitamente **Probar conexión**, el asistente comprueba la configuración del proveedor seleccionado. Los flujos guiados de despliegue pueden aprovisionar los recursos incluidos en un plan revisado dentro de las cuentas de proveedor conectadas y configurar servicios compatibles. No crean cuentas de proveedor: debe aportar sus propias cuentas y credenciales, preparar los requisitos específicos de la plataforma y revisar los costes y el plan antes de aprobar el despliegue.
 
 El área de plugins expone un conjunto de componentes incluidos en la lista de permitidos; no es un mercado de paquetes arbitrario y no descarga ni ejecuta código de plugins cargados. El servicio opcional de retransmisión de eventos puede desplegarse por separado para el evento de actualización de perfil de cuenta actualmente soportado. No es un registro de servicios general, un bus de mensajes ni un sistema de confirmación por consumidor.
 
@@ -64,7 +64,7 @@ La configuración de la cuenta proporciona una exportación JSON de los datos de
 
 El panel de control incluye vistas de cuenta y facturación. La analítica de producto opcional recopila eventos con control de consentimiento y proporciona informes administrativos; no son un reemplazo para una plataforma de analítica de terceros. La atribución, el seguimiento de marketing y las cookies de referidos pueden tener obligaciones de consentimiento en su despliegue. Launchpad no incluye una plataforma de gestión de consentimiento.
 
-La interfaz admite 18 localizaciones: inglés, árabe, bengalí, alemán, español, francés, hindi, indonesio, italiano, japonés, coreano, neerlandés, polaco, portugués, ruso, turco, vietnamita y chino. El inglés es el catálogo de respaldo y el idioma de respaldo del asistente de configuración. Revise las traducciones y el texto legal para su audiencia antes del lanzamiento.
+La interfaz admite 18 localizaciones: inglés, árabe, bengalí, alemán, español, francés, hindi, indonesio, italiano, japonés, coreano, neerlandés, polaco, portugués, ruso, turco, vietnamita y chino. El inglés es el catálogo de respaldo. Revise las traducciones y el texto legal para su audiencia antes del lanzamiento.
 
 El creador del producto permite cambiar el contenido compatible de las páginas, la navegación y la marca. El editor de movimiento permite previsualizar y ajustar los efectos de animación disponibles.
 

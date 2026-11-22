@@ -28,11 +28,13 @@ from a fresh clone to change the selected modules after setup.
 Launchpad receives regular updates. See the Gumroad product page for current access options and purchase terms. Launchpad is software you host and operate yourself, not a hosted SaaS service; hosting and third-party provider fees are separate.
 
 The wizard writes selected modules and deployment preferences to
-`launchpad.config.json`, and provider secrets to the Git-ignored `.env` file.
-It can check selected provider credentials when you explicitly choose **Test
-connection**. It does not create provider accounts, deploy infrastructure,
-or configure external dashboards. You still need to complete and maintain
-those services yourself.
+`launchpad.config.json`. Application settings may be saved to the Git-ignored
+`.env` file. When you explicitly choose **Test connection**, the wizard checks
+the selected provider settings. Guided deployment workflows can provision the
+resources listed in a reviewed plan in connected provider accounts and
+configure supported provider services. They do not create provider accounts;
+you must bring your own accounts and credentials, prepare target-specific
+prerequisites, and review costs and plan details before approving deployment.
 
 The plugin area exposes an allow-listed set of bundled components; it is not
 an arbitrary package marketplace and does not download or execute uploaded
@@ -158,9 +160,8 @@ your deployment. Launchpad does not include a consent-management platform.
 
 The interface supports 18 locales: English, Arabic, Bengali, German,
 Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Dutch, Polish,
-Portuguese, Russian, Turkish, Vietnamese, and Chinese. English is the
-fallback catalog and the setup wizard's fallback language. Review translations
-and legal text for your audience before launch.
+Portuguese, Russian, Turkish, Vietnamese, and Chinese. English is the fallback
+catalog. Review translations and legal text for your audience before launch.
 
 The product builder lets you update supported page content, navigation, and brand settings. The motion editor lets users preview and adjust supported animation styles and timing.
 

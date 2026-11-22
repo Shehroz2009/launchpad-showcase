@@ -14,11 +14,15 @@ Launchpad là một ứng dụng SaaS mô-đun được xây dựng trên một 
 
 Trong một bản sao Git, quá trình cài đặt sử dụng sparse-checkout để các tệp được theo dõi nhưng bị loại trừ vẫn còn trong lịch sử Git. Đây là một lần cài đặt duy nhất, không phải là công cụ chuyển đổi mô-đun tại chỗ.
 
-Trình hướng dẫn ghi các mô-đun đã chọn và sở thích triển khai vào
-`launchpad.config.json`, và các bí mật nhà cung cấp vào tệp `.env` bị Git bỏ qua.
-Nó có thể kiểm tra thông tin xác thực của nhà cung cấp đã chọn khi bạn chủ động chọn **Kiểm tra kết nối**. Nó không tạo tài khoản nhà cung cấp, triển khai hạ tầng,
-hoặc cấu hình các bảng điều khiển bên ngoài. Bạn vẫn cần hoàn thành và duy trì
-các dịch vụ đó một cách độc lập.
+Trình hướng dẫn lưu các mô-đun đã chọn và tùy chọn triển khai vào
+`launchpad.config.json`. Cài đặt ứng dụng có thể được lưu trong tệp `.env` cục
+bộ bị Git bỏ qua. Khi bạn chủ động chọn **Kiểm tra kết nối**, trình hướng dẫn
+sẽ kiểm tra cài đặt của nhà cung cấp đã chọn. Các quy trình triển khai có hướng
+dẫn có thể tạo tài nguyên được liệt kê trong kế hoạch đã xem xét trên các tài
+khoản nhà cung cấp được kết nối và cấu hình các dịch vụ được hỗ trợ. Chúng
+không tạo tài khoản nhà cung cấp; hãy chuẩn bị tài khoản, thông tin xác thực và
+các điều kiện tiên quyết của nền tảng, đồng thời xem xét chi phí và kế hoạch
+trước khi phê duyệt triển khai.
 
 Khu vực plugin hiển thị một bộ các thành phần được đóng gói theo danh sách cho phép; nó không
 phải là một chợ gói tùy ý và không tải xuống hoặc thực thi mã plugin được tải lên. Dịch vụ chuyển tiếp sự kiện tùy chọn có thể được triển khai riêng cho sự kiện cập nhật hồ sơ tài khoản hiện được hỗ trợ. Nó không phải là một

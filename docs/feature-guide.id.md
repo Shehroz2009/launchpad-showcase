@@ -12,7 +12,7 @@ Launchpad adalah aplikasi SaaS modular yang dibangun di atas satu basis kode ber
 
 Dalam checkout Git, pengaturan menggunakan sparse-checkout sehingga file yang dilacak tetapi dikecualikan tetap ada dalam riwayat Git. Ini adalah pengaturan sekali jalan, bukan alat pengalih modul di tempat.
 
-Wizard menulis modul yang dipilih dan preferensi deployment ke `launchpad.config.json`, dan rahasia penyedia ke file `.env` yang diabaikan oleh Git. Wizard ini dapat memeriksa kredensial penyedia yang dipilih ketika Anda secara eksplisit memilih **Uji koneksi**. Wizard ini tidak membuat akun penyedia, mendeploy infrastruktur, atau mengonfigurasi dasbor eksternal. Anda masih perlu menyelesaikan dan memelihara layanan-layanan tersebut sendiri.
+Wizard menyimpan modul terpilih dan preferensi deployment ke `launchpad.config.json`. Pengaturan aplikasi dapat disimpan ke file `.env` lokal yang diabaikan Git. Jika Anda secara eksplisit memilih **Uji koneksi**, wizard memeriksa pengaturan penyedia yang dipilih. Alur deployment terpandu dapat menyediakan sumber daya yang tercantum dalam rencana yang telah ditinjau di akun penyedia yang terhubung serta mengonfigurasi layanan penyedia yang didukung. Alur ini tidak membuat akun penyedia; siapkan akun dan kredensial Anda sendiri, penuhi prasyarat khusus platform, serta tinjau biaya dan rencana sebelum menyetujui deployment.
 
 Area plugin mengekspos seperangkat komponen bawaan yang diizinkan; ini bukan pasar paket yang sewenang-wenang dan tidak mengunduh atau mengeksekusi kode plugin yang diunggah. Layanan relay event opsional dapat dideploy secara terpisah untuk event pembaruan profil akun yang didukung saat ini. Ini bukan registri layanan umum, bus pesan, atau sistem pengakuan per konsumen.
 
@@ -62,7 +62,7 @@ Pengaturan akun menyediakan ekspor JSON dari data akun yang didukung dan tautan 
 
 Dasbor mencakup tampilan akun dan penagihan. Analitik produk opsional mengumpulkan event yang dikendalikan persetujuan dan menyediakan laporan administratif; ini bukan pengganti platform analitik pihak ketiga. Atribusi, pelacakan pemasaran, dan cookie rujukan mungkin memiliki kewajiban persetujuan dalam deployment Anda. Launchpad tidak menyertakan platform manajemen persetujuan.
 
-Antarmuka mendukung 18 lokalisasi: Inggris, Arab, Bengali, Jerman, Spanyol, Prancis, Hindi, Indonesia, Italia, Jepang, Korea, Belanda, Polandia, Portugis, Rusia, Turki, Vietnam, dan Mandarin. Inggris adalah katalog fallback dan bahasa fallback wizard pengaturan. Tinjau terjemahan dan teks hukum untuk audiens Anda sebelum peluncuran.
+Antarmuka mendukung 18 lokalisasi: Inggris, Arab, Bengali, Jerman, Spanyol, Prancis, Hindi, Indonesia, Italia, Jepang, Korea, Belanda, Polandia, Portugis, Rusia, Turki, Vietnam, dan Mandarin. Inggris adalah katalog fallback. Tinjau terjemahan dan teks hukum untuk audiens Anda sebelum peluncuran.
 
 Product builder memungkinkan Anda mengubah konten halaman yang didukung, navigasi, dan pengaturan merek. Motion editor memungkinkan pengguna melihat pratinjau dan menyesuaikan animasi yang didukung.
 

@@ -14,7 +14,7 @@ Launchpad ist eine modulare SaaS-Anwendung, die auf einer gemeinsamen Codebasis 
 
  Bei einem Git-Checkout verwendet die Einrichtung sparse-checkout, sodass ausgeschlossene, aber nachverfolgte Dateien in der Git-Verlaufshistorie verbleiben. Dies ist eine einmalige Einrichtung und kein Werkzeug zum Umschalten von Modulen an Ort und Stelle.
 
-Der Wizard schreibt die ausgewählten Module und Bereitstellungseinstellungen in `launchpad.config.json` und die Anbieter-Geheimnisse in die von Git ignorierte Datei `.env`. Er kann die ausgewählten Anbieter-Zugangsdaten überprüfen, wenn Sie explizit **Verbindung testen** wählen. Er erstellt keine Anbieterkonten, stellt keine Infrastruktur bereit und konfiguriert keine externen Dashboards. Sie müssen diese Dienste weiterhin selbst abschließen und warten.
+Der Einrichtungsassistent speichert ausgewählte Module und Bereitstellungseinstellungen in `launchpad.config.json`. Anwendungseinstellungen können in der von Git ignorierten lokalen `.env`-Datei gespeichert werden. Wenn Sie explizit **Verbindung testen** wählen, prüft der Assistent die ausgewählten Anbietereinstellungen. Die geführten Bereitstellungsworkflows können die im geprüften Plan aufgeführten Ressourcen in verbundenen Anbieterkonten bereitstellen und unterstützte Anbieterdienste konfigurieren. Sie erstellen keine Anbieterkonten; richten Sie eigene Konten und Zugangsdaten ein, erfüllen Sie plattformspezifische Voraussetzungen und prüfen Sie Kosten und Plan, bevor Sie der Bereitstellung zustimmen.
 
 Der Plugin-Bereich stellt einen erlaubten Satz gebündelter Komponenten bereit; es handelt sich nicht um einen beliebigen Paketmarkt und es werden keine hochgeladenen Plugin-Codes heruntergeladen oder ausgeführt. Der optionale Event-Relay-Dienst kann separat für das derzeit unterstützte Ereignis zur Aktualisierung des Kontoprofils bereitgestellt werden. Es ist keine allgemeine Dienstepregistrierung, kein Nachrichtenbus und kein System für Bestätigungen pro Verbraucher.
 
@@ -64,7 +64,7 @@ Die Kontoeinstellungen bieten einen JSON-Export der unterstützten Kontodaten un
 
 Das Dashboard enthält Ansichten für Konten und Abrechnung. Optionale Produktanalysen sammeln zustimmungsgeschützte Ereignisse und bieten administrative Berichte; sie sind kein Ersatz für eine Drittanbieter-Analyseplattform. Attribution, Marketing-Tracking und Empfehlungscookies können in Ihrer Bereitstellung Zustimmungspflichten haben. Launchpad enthält keine Consent-Management-Plattform.
 
-Die Oberfläche unterstützt 18 Lokalisierungen: Englisch, Arabisch, Bengalisch, Deutsch, Spanisch, Französisch, Hindi, Indonesisch, Italienisch, Japanisch, Koreanisch, Niederländisch, Polnisch, Portugiesisch, Russisch, Türkisch, Vietnamesisch und Chinesisch. Englisch ist das Fallback-Katalog und die Fallback-Sprache des Einrichtungswizards. Prüfen Sie Übersetzungen und rechtliche Texte für Ihre Zielgruppe vor dem Start.
+Die Oberfläche unterstützt 18 Lokalisierungen: Englisch, Arabisch, Bengalisch, Deutsch, Spanisch, Französisch, Hindi, Indonesisch, Italienisch, Japanisch, Koreanisch, Niederländisch, Polnisch, Portugiesisch, Russisch, Türkisch, Vietnamesisch und Chinesisch. Englisch ist der Fallback-Katalog. Prüfen Sie Übersetzungen und rechtliche Texte für Ihre Zielgruppe vor dem Start.
 
 Mit dem Produkteditor kannst du unterstützte Seiteninhalte, die Navigation und Markeneinstellungen anpassen. Im Motion-Editor können Nutzer unterstützte Animationen ansehen und anpassen.
 

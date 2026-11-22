@@ -12,7 +12,7 @@ Launchpad, tek bir ortak kod tabanı üzerinde inşa edilmiş modüler bir SaaS 
 
 Bir Git kontrolünde, kurulum sparse-checkout kullanır; bu sayede hariç tutulan izlenen dosyalar Git geçmişinde kalır. Bu, yerinde modül değiştirme aracı değil, tek seferlik bir kurulumdur.
 
-Sihirbaz, seçilen modülleri ve dağıtım tercihlerini `launchpad.config.json` dosyasına, sağlayıcı gizli anahtarlarını ise Git tarafından yok sayılan `.env` dosyasına yazar. **Bağlantıyı test et** seçeneğini açıkça seçtiğinizde seçilen sağlayıcı kimlik bilgilerini kontrol edebilir. Sağlayıcı hesapları oluşturmaz, altyapı dağıtmaz veya harici panoları yapılandırmaz. Bu hizmetleri yine kendiniz tamamlamanız ve sürdürmeniz gerekir.
+Sihirbaz, seçilen modülleri ve dağıtım tercihlerini `launchpad.config.json` dosyasına kaydeder. Uygulama ayarları, Git tarafından yok sayılan yerel `.env` dosyasına kaydedilebilir. **Bağlantıyı test et** seçeneğini açıkça seçtiğinizde sihirbaz seçilen sağlayıcı ayarlarını denetler. Rehberli dağıtım iş akışları, incelenen planda listelenen kaynakları bağlı sağlayıcı hesaplarında oluşturabilir ve desteklenen hizmetleri yapılandırabilir. Sağlayıcı hesaplarını oluşturmazlar; dağıtımı onaylamadan önce kendi hesaplarınızı ve kimlik bilgilerinizi hazırlayın, platforma özgü ön koşulları karşılayın, maliyetleri ve planı inceleyin.
 
 Eklenti alanı, paketlenmiş bileşenlerin izin verilen bir listesini sunar; bu, keyfi bir paket pazarı değildir ve yüklenen eklenti kodunu indirmez veya çalıştırmaz. İsteğe bağlı olay iletim (event-relay) hizmeti, şu anda desteklenen hesap profili güncelleme olayı için ayrı olarak dağıtılabilir. Bu, genel bir hizmet kayıt defteri, mesaj sırası (message bus) veya tüketici başına onay sistemi değildir.
 
@@ -62,7 +62,7 @@ Hesap ayarları, desteklenen hesap verilerinin JSON dışa aktarımını ve fatu
 
 Gösterge paneli, hesap ve faturalama görünümlerini içerir. İsteğe bağlı ürün analitiği, rıza kapılı olayları toplar ve yönetici raporları sağlar; bunlar, üçüncü taraf bir analitik platformunun yerini tutmaz. Atıf (attribution), pazarlama izleme ve yönlendirme çerezleri, dağıtımınızda rıza yükümlülüklerine sahip olabilir. Launchpad, bir rıza yönetim platformu içermez.
 
-Arayüz, 18 yereli destekler: İngilizce, Arapça, Bengalce, Almanca, İspanyolca, Fransızca, Hintçe, Endonezce, İtalyanca, Japonca, Korece, Felemenkçe, Lehçe, Portekizce, Rusça, Türkçe, Vietnamca ve Çince. İngilizce, yedek katalog ve kurulum sihirbazının yedek dilidir. Yayına çıkmadan önce çevirileri ve hukuki metinleri hedef kitleniz için gözden geçirin.
+Arayüz, 18 yereli destekler: İngilizce, Arapça, Bengalce, Almanca, İspanyolca, Fransızca, Hintçe, Endonezce, İtalyanca, Japonca, Korece, Felemenkçe, Lehçe, Portekizce, Rusça, Türkçe, Vietnamca ve Çince. İngilizce yedek katalogdur. Yayına çıkmadan önce çevirileri ve hukuki metinleri hedef kitleniz için gözden geçirin.
 
 Ürün oluşturucu, desteklenen sayfa içeriğini, gezinmeyi ve marka ayarlarını düzenlemenizi sağlar. Hareket düzenleyiciyle desteklenen animasyonları önizleyip ayarlayabilirsiniz.
 

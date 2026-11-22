@@ -14,7 +14,7 @@ Launchpad è un'applicazione SaaS modulare costruita su un'unica base di codice 
 
 In un checkout Git, la configurazione utilizza sparse-checkout, quindi i file tracciati esclusi rimangono nella cronologia di Git. Questa è una configurazione una tantum, non uno strumento di commutazione dei moduli in loco.
 
-La procedura guidata scrive i moduli selezionati e le preferenze di deployment in `launchpad.config.json`, e i segreti dei provider nel file `.env` ignorato da Git. Può verificare le credenziali dei provider selezionati quando si sceglie esplicitamente **Testa connessione**. Non crea account dei provider, non distribuisce infrastrutture e non configura dashboard esterni. È comunque necessario completare e mantenere quei servizi in autonomia.
+La procedura guidata salva i moduli selezionati e le preferenze di deployment in `launchpad.config.json`. Le impostazioni dell'applicazione possono essere salvate nel file `.env` locale ignorato da Git. Se si sceglie esplicitamente **Testa connessione**, la procedura verifica le impostazioni del provider selezionato. I flussi guidati di deployment possono predisporre le risorse indicate in un piano esaminato negli account provider collegati e configurare i servizi supportati. Non creano account provider: è necessario disporre dei propri account e delle credenziali, preparare i prerequisiti specifici della piattaforma e verificare costi e piano prima di approvare il deployment.
 
 L'area plugin espone un insieme di componenti inclusi in un elenco di autorizzazione; non è un marketplace di pacchetti arbitrario e non scarica o esegue codice di plugin caricato. Il servizio opzionale di relay eventi può essere distribuito separatamente per l'evento attualmente supportato di aggiornamento del profilo account. Non è un registro di servizi generale, un message bus o un sistema di conferma per singolo consumatore.
 
@@ -64,7 +64,7 @@ Le impostazioni dell'account forniscono un'esportazione JSON dei dati dell'accou
 
 La dashboard include viste per account e fatturazione. L'analisi prodotto opzionale raccoglie eventi basati sul consenso e fornisce report amministrativi; non sono una sostituzione per una piattaforma di analisi di terze parti. L'attribuzione, il tracciamento di marketing e i cookie di referral possono avere obblighi di consenso nel vostro deployment. Launchpad non include una piattaforma di gestione del consenso.
 
-L'interfaccia supporta 18 lingue: inglese, arabo, bengalese, tedesco, spagnolo, francese, hindi, indonesiano, italiano, giapponese, coreano, olandese, polacco, portoghese, russo, turco, vietnamita e cinese. L'inglese è il catalogo di fallback e la lingua di fallback della procedura guidata di configurazione. Rivedere traduzioni e testi legali per il vostro pubblico prima del lancio.
+L'interfaccia supporta 18 lingue: inglese, arabo, bengalese, tedesco, spagnolo, francese, hindi, indonesiano, italiano, giapponese, coreano, olandese, polacco, portoghese, russo, turco, vietnamita e cinese. L'inglese è il catalogo di fallback. Rivedere traduzioni e testi legali per il vostro pubblico prima del lancio.
 
 Il product builder consente di modificare i contenuti supportati delle pagine, la navigazione e le impostazioni del brand. Con l’editor delle animazioni gli utenti possono visualizzare e regolare gli effetti disponibili.
 

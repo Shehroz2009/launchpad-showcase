@@ -14,7 +14,7 @@ Launchpad est une application SaaS modulaire construite sur une base de code par
 
 Dans un checkout Git, la configuration utilise sparse-checkout afin que les fichiers suivis exclus restent dans l'historique Git. Il s'agit d'une configuration unique, et non d'un outil de bascule de modules sur place.
 
-L'assistant écrit les modules sélectionnés et les préférences de déploiement dans `launchpad.config.json`, et les secrets des fournisseurs dans le fichier `.env` ignoré par Git. Il peut vérifier les identifiants des fournisseurs sélectionnés lorsque vous choisissez explicitement **Tester la connexion**. Il ne crée pas de comptes fournisseurs, ne déploie pas d'infrastructure, et ne configure pas les tableaux de bord externes. Vous devez toujours compléter et maintenir ces services vous-même.
+L'assistant enregistre les modules sélectionnés et les préférences de déploiement dans `launchpad.config.json`. Les paramètres de l'application peuvent être enregistrés dans le fichier `.env` local ignoré par Git. Lorsque vous choisissez explicitement **Tester la connexion**, l'assistant vérifie les paramètres du fournisseur sélectionné. Les workflows de déploiement guidés peuvent provisionner les ressources prévues dans un plan examiné au sein des comptes fournisseurs connectés et configurer les services pris en charge. Ils ne créent pas de comptes fournisseurs : vous devez fournir vos propres comptes et identifiants, préparer les prérequis propres à la plateforme et examiner les coûts et le plan avant d'approuver le déploiement.
 
 La zone de plugins expose un ensemble de composants intégrés autorisés par liste blanche ; ce n'est pas un marché de paquets arbitraire et il ne télécharge ni n'exécute le code des plugins téléversés. Le service optionnel de relais d'événements peut être déployé séparément pour l'événement actuellement pris en charge de mise à jour du profil de compte. Ce n'est pas un registre de services général, un bus de messages, ou un système d'accusé de réception par consommateur.
 
@@ -64,7 +64,7 @@ Les paramètres du compte fournissent une exportation JSON des données de compt
 
 Le tableau de bord inclut des vues de compte et de facturation. L'analyse produit optionnelle collecte des événements soumis au consentement et fournit des rapports administratifs ; ils ne sont pas un remplacement pour une plateforme d'analyse tierce. L'attribution, le suivi marketing et les cookies de parrainage peuvent avoir des obligations de consentement dans votre déploiement. Launchpad n'inclut pas de plateforme de gestion du consentement.
 
-L'interface prend en charge 18 locales : anglais, arabe, bengali, allemand, espagnol, français, hindi, indonésien, italien, japonais, coréen, néerlandais, polonais, portugais, russe, turc, vietnamien et chinois. L'anglais est le catalogue de secours et la langue de secours de l'assistant de configuration. Examinez les traductions et les textes juridiques pour votre audience avant le lancement.
+L'interface prend en charge 18 locales : anglais, arabe, bengali, allemand, espagnol, français, hindi, indonésien, italien, japonais, coréen, néerlandais, polonais, portugais, russe, turc, vietnamien et chinois. L'anglais est le catalogue de secours. Examinez les traductions et les textes juridiques pour votre audience avant le lancement.
 
 Le créateur de produit permet de modifier le contenu des pages prises en charge, la navigation et la marque. L’éditeur d’animations permet de prévisualiser et d’ajuster les effets disponibles.
 

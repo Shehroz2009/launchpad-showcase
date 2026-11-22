@@ -15,11 +15,14 @@ O Launchpad é uma aplicação SaaS modular construída sobre uma única base de
 Esta é uma configuração única, não uma ferramenta de alternância de módulos in-place.
 
 O assistente grava os módulos selecionados e as preferências de implantação em
-`launchpad.config.json`, e os segredos dos provedores no arquivo `.env` ignorado pelo Git.
-Ele pode verificar as credenciais dos provedores selecionados quando você explicitamente escolhe **Testar
-conexão**. Ele não cria contas de provedores, implanta infraestrutura
-ou configura painéis externos. Você ainda precisa completar e manter
-esses serviços por sua conta.
+`launchpad.config.json`. As configurações da aplicação podem ser salvas no
+arquivo `.env` local ignorado pelo Git. Ao escolher explicitamente **Testar
+conexão**, o assistente verifica as configurações do provedor selecionado.
+Fluxos guiados de implantação podem provisionar os recursos descritos em um
+plano revisado nas contas de provedores conectadas e configurar serviços
+compatíveis. Eles não criam contas de provedores: prepare suas próprias contas
+e credenciais, cumpra os pré-requisitos específicos da plataforma e revise os
+custos e o plano antes de aprovar a implantação.
 
 A área de plugins expõe um conjunto de componentes incluídos em uma lista de permissões; não é
 um mercado de pacotes arbitrário e não baixa ou executa código de

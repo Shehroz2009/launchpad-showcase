@@ -15,11 +15,13 @@ Launchpad to modułowa aplikacja SaaS zbudowana na jednej wspólnej bazie kodu. 
 W przypadku pobrania przez Git, konfiguracja używa sparse-checkout, więc wykluczone śledzone pliki pozostają w historii Git. Jest to jednorazowa konfiguracja, a nie narzędzie do przełączania modułów w miejscu.
 
 Kreator zapisuje wybrane moduły i preferencje wdrożeniowe w
-`launchpad.config.json`, a sekrety dostawców w pliku `.env` ignorowanym przez Git.
-Może sprawdzić wybrane dane uwierzytelniające dostawców, gdy wprost wybierzesz **Test
-połączenia**. Nie tworzy kont dostawców, nie wdraża infrastruktury
-ani nie konfiguruje zewnętrznych paneli administracyjnych. Nadal musisz samodzielnie
-ukończyć i utrzymywać te usługi.
+`launchpad.config.json`. Ustawienia aplikacji mogą być zapisywane w lokalnym
+pliku `.env` ignorowanym przez Git. Po wybraniu **Test połączenia** kreator
+sprawdza ustawienia wybranego dostawcy. Prowadzone przepływy wdrożeniowe mogą
+tworzyć zasoby wymienione w sprawdzonym planie na połączonych kontach dostawców
+i konfigurować obsługiwane usługi. Nie tworzą kont dostawców: przed zgodą na
+wdrożenie przygotuj własne konta i dane uwierzytelniające, spełnij wymagania
+platformy oraz sprawdź koszty i plan.
 
 Obszar wtyczek udostępnia dozwolony zestaw wbudowanych komponentów; nie jest
 to dowolny rynek pakietów i nie pobiera ani nie wykonuje kodu wgranych

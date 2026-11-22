@@ -29,12 +29,14 @@ eenmalige configuratie, geen tool voor het wisselen van modules op de
 bestaande locatie.
 
 De wizard schrijft de geselecteerde modules en implementatievoorkeuren naar
-`launchpad.config.json`, en provider-secrets naar het door Git genegeerde `.env`-bestand.
-Het kan de geselecteerde provider-credentials controleren wanneer u expliciet
-**Verbinding
-testen** kiest. Het maakt geen provider-accounts aan, implementeert
-geen infrastructuur, en configureert geen externe dashboards. U moet die
-services nog steeds zelf voltooien en onderhouden.
+`launchpad.config.json`. Applicatie-instellingen kunnen worden opgeslagen in
+het lokale `.env`-bestand dat door Git wordt genegeerd. Als u expliciet
+**Verbinding testen** kiest, controleert de wizard de geselecteerde
+providerinstellingen. Begeleide implementatieworkflows kunnen de resources uit
+een beoordeeld plan aanmaken in gekoppelde provideraccounts en ondersteunde
+providerservices configureren. Ze maken geen provideraccounts aan: zorg zelf
+voor accounts en inloggegevens, voldoe aan platformspecifieke vereisten en
+controleer kosten en plan voordat u de implementatie goedkeurt.
 
 Het plugin-gebied biedt een toegestane set ingebouwde componenten; het is
 geen willekeurige pakketmarkt en downloadt of voert geen geüploade
