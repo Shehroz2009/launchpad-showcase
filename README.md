@@ -16,6 +16,17 @@ deployed services.
 
 [View Launchpad on Gumroad](https://shehroz2009.gumroad.com/l/launchpad-full-scale-saas-foundation)
 
+Read this README in one of 17 additional languages:
+[العربية](./readmes/README.ar.md) · [বাংলা](./readmes/README.bn.md) ·
+[Deutsch](./readmes/README.de.md) · [Español](./readmes/README.es.md) ·
+[Français](./readmes/README.fr.md) · [हिन्दी](./readmes/README.hi.md) ·
+[Bahasa Indonesia](./readmes/README.id.md) · [Italiano](./readmes/README.it.md) ·
+[日本語](./readmes/README.ja.md) · [한국어](./readmes/README.ko.md) ·
+[Nederlands](./readmes/README.nl.md) · [Polski](./readmes/README.pl.md) ·
+[Português](./readmes/README.pt.md) · [Русский](./readmes/README.ru.md) ·
+[Türkçe](./readmes/README.tr.md) · [Tiếng Việt](./readmes/README.vi.md) ·
+[简体中文](./readmes/README.zh.md)
+
 ## Product preview
 
 ![Launchpad public product experience](./screenshots/01-landing-dark.png)
